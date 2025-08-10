@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reveal.js + Markdown (GitHub Pages)</title>
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <!-- Theme: swap 'black.css' with e.g. 'white.css', 'league.css', 'moon.css', 'sky.css' -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/white.css" id="theme">
+  <!-- Code highlighting theme -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+
+  <style>
+    /* Optional: etwas Luft oben/unten für schmale Screens */
+    .reveal .slides { padding-top: 10px; padding-bottom: 10px; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!--
+      Ein einziges HTML-File, das direkt auf GitHub Pages funktioniert.
+      Die Markdown-Slides werden über Trennlinien --- (horizontal) und -- (vertikal) definiert.
+    -->
+    <section
+      data-markdown
+      data-separator="^\n---\n$"
+      data-separator-vertical="^\n--\n$"
+      data-separator-notes="^Note:"
+    >
+      <textarea data-template>
+## Digitale Tragwerksplanung
+
+
+
+---
+
+## Aufbau der LVA
+
+1. Informationen Erheben und Strukturieren
+2. Informationen generieren <!-- .element: class="fragment" data-fragment-index="2" -->
+3. Informationen teilen <!-- .element: class="fragment" data-fragment-index="3" -->
+4. Informationen werden Relität <!-- .element: class="fragment" data-fragment-index="4" -->
+
+---
+
+
+      </textarea>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js core + Plugins von CDN -->
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/search/search.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    transition: 'slide',
+    center: true,
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealZoom, RevealMath.KaTeX ]
+  });
+</script>
+</body>
+</html>
