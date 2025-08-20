@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reveal.js + Markdown (GitHub Pages)</title>
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <!-- Theme: swap 'black.css' with e.g. 'white.css', 'league.css', 'moon.css', 'sky.css' -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/white.css" id="theme">
+  <!-- Code highlighting theme -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+
+  <style>
+    /* Optional: etwas Luft oben/unten für schmale Screens */
+    .reveal .slides { padding-top: 10px; padding-bottom: 10px; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!--
+      Ein einziges HTML-File, das direkt auf GitHub Pages funktioniert.
+      Die Markdown-Slides werden über Trennlinien --- (horizontal) und -- (vertikal) definiert.
+    -->
+    <section
+      data-markdown
+      data-separator="^\n---\n$"
+      data-separator-vertical="^\n--\n$"
+      data-separator-notes="^Note:"
+    >
+      <textarea data-template>
+## Digitale Tragwerksplanung
+### Vorlesung und Übung
+
+
+---
+
+## Was ist digitale Tragwerksplanung?
+
+- Was ist digital? <!-- .element: class="fragment" data-fragment-index="2" -->
+- Was ist Tragwerksplanung? <!-- .element: class="fragment" data-fragment-index="3" -->
+
+--
+
+## Was ist digital?
+
+- Reliability - Zuverlässigkeit <!-- .element: class="fragment" data-fragment-index="2" -->
+- Modularity - Modularität <!-- .element: class="fragment" data-fragment-index="3" -->
+- Locality - Lokalität <!-- .element: class="fragment" data-fragment-index="4" -->
+- Reversibility - Reversibilität <!-- .element: class="fragment" data-fragment-index="5" -->
+
+<small class="attribution">Quelle: Gershenfeld - Designing Reality</small> <!-- .element: class="fragment" data-fragment-index="5" -->
+
+--
+
+## Was ist Tragwerksplanung?
+
+<img src="figures/LM_VM_2023_TWP.png" alt="LM_VM_2023_TWP" style="max-width:60%;height:auto;" />
+<figcaption style="font-size:0.6em;opacity:.7">(Bildquelle: Lechner LM.VM.2023)</figcaption>
+
+
+--
+
+## Was ist Tragwerksplanung?
+
+- Bestandteil der Fachplanung <!-- .element: class="fragment" data-fragment-index="2" -->
+- "Statik" <!-- .element: class="fragment" data-fragment-index="3" -->
+- Eng mit Objektplanung verknüpft <!-- .element: class="fragment" data-fragment-index="4" -->
+
+--
+
+#### Was ist digitale Tragwerksplanung?
+
+## Zuverlässigkeit
+
+Analoge Informationen -> Digitale Informationen
+
+--
+
+#### Was ist digitale Tragwerksplanung?
+
+## Modularität
+
+Zerlegen der Planung, Bauwerke, Bauteile in kleinere Teile die aber leicht verknüpft werden können
+
+--
+
+#### Was ist digitale Tragwerksplanung?
+
+## Lokalität
+
+Informationen müssen auch von "unten" nach "oben" fließen können
+
+--
+
+#### Was ist digitale Tragwerksplanung?
+
+## Reversibilität
+
+Änderungen und Korrekturen sind möglich (und leicht zu implementieren und kommunizieren)
+
+---
+
+
+## Aufbau der LVA (VO u. UE)
+
+1. Informationen Erheben und Strukturieren <!-- .element: class="fragment" data-fragment-index="2" -->
+2. Informationen generieren <!-- .element: class="fragment" data-fragment-index="3" -->
+3. Informationen teilen <!-- .element: class="fragment" data-fragment-index="4" -->
+4. Informationen werden Realität <!-- .element: class="fragment" data-fragment-index="5" -->
+
+--
+
+#### Ablauf Vorlesung
+
+<img src="figures/DiTWP_Slides_100_2.png" alt="DiTWP_Slides_100_2" style="max-width:80%;height:auto;" />
+
+--
+
+#### Ablauf Übung
+
+<img src="figures/DiTWP_Slides_100_1.png" alt="DiTWP_Slides_100_1" style="max-width:80%;height:auto;" />
+
+
+
+
+
+
+      </textarea>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js core + Plugins von CDN -->
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/search/search.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    transition: 'slide',
+    center: true,
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealZoom, RevealMath.KaTeX ]
+  });
+</script>
+</body>
+</html>
