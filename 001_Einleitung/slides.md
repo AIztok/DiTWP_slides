@@ -101,8 +101,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 <img
   src="./figures/DiTWP_Slides_100_2.png"
   alt="DiTWP_Slides_100_2"
-  style="max-width:80%;height:auto;"
->
+  style="max-width:80%;height:auto;">
 
 
 --
@@ -112,8 +111,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 <img
   src="./figures/DiTWP_Slides_100_1.png"
   alt="DiTWP_Slides_100_1"
-  style="max-width:80%;height:auto;"
->
+  style="max-width:80%;height:auto;">
 
 
 --
@@ -121,8 +119,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 <img
   src="./figures/DiTWP_Slides_100_3.png"
   alt="DiTWP_Slides_100_3"
-  style="max-width:80%;height:auto;"
->
+  style="max-width:80%;height:auto;">
 
 
 --
@@ -130,8 +127,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 <img
   src="./figures/DiTWP_Slides_100_4.png"
   alt="DiTWP_Slides_100_4"
-  style="max-width:80%;height:auto;"
->
+  style="max-width:80%;height:auto;">
 
 
 --
@@ -139,8 +135,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 <img
   src="./figures/DiTWP_Slides_100_5.png"
   alt="DiTWP_Slides_100_5"
-  style="max-width:80%;height:auto;"
->
+  style="max-width:80%;height:auto;">
 
 
 --
@@ -148,5 +143,4 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 <img
   src="./figures/DiTWP_Slides_100_6.png"
   alt="DiTWP_Slides_100_6"
-  style="max-width:80%;height:auto;"
->
+  style="max-width:80%;height:auto;">
