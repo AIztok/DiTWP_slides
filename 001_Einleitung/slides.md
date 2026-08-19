@@ -28,7 +28,7 @@
 ## Was ist Tragwerksplanung?
 
 <img
-  src="figures/LM_VM_2023_TWP.png"
+  src="./figures/LM_VM_2023_TWP.png"
   alt="LM_VM_2023_TWP"
   style="max-width:60%;height:auto;"
 >
@@ -100,7 +100,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 #### Ablauf Vorlesung
 
 <img
-  src="figures/DiTWP_Slides_100_2.png"
+  src="./figures/DiTWP_Slides_100_2.png"
   alt="DiTWP_Slides_100_2"
   style="max-width:80%;height:auto;"
 >
@@ -111,7 +111,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 #### Ablauf Übung
 
 <img
-  src="figures/DiTWP_Slides_100_1.png"
+  src="./figures/DiTWP_Slides_100_1.png"
   alt="DiTWP_Slides_100_1"
   style="max-width:80%;height:auto;"
 >
@@ -120,7 +120,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 --
 
 <img
-  src="figures/DiTWP_Slides_100_3.png"
+  src="./figures/DiTWP_Slides_100_3.png"
   alt="DiTWP_Slides_100_3"
   style="max-width:80%;height:auto;"
 >
@@ -129,7 +129,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 --
 
 <img
-  src="figures/DiTWP_Slides_100_4.png"
+  src="./figures/DiTWP_Slides_100_4.png"
   alt="DiTWP_Slides_100_4"
   style="max-width:80%;height:auto;"
 >
@@ -138,7 +138,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 --
 
 <img
-  src="figures/DiTWP_Slides_100_5.png"
+  src="./figures/DiTWP_Slides_100_5.png"
   alt="DiTWP_Slides_100_5"
   style="max-width:80%;height:auto;"
 >
@@ -147,7 +147,7 @@ Informationen müssen auch von "unten" nach "oben" fließen können.
 --
 
 <img
-  src="figures/DiTWP_Slides_100_6.png"
+  src="./figures/DiTWP_Slides_100_6.png"
   alt="DiTWP_Slides_100_6"
   style="max-width:80%;height:auto;"
 >
