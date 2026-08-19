@@ -30,8 +30,7 @@
 <img
   src="./figures/LM_VM_2023_TWP.png"
   alt="LM_VM_2023_TWP"
-  style="max-width:60%;height:auto;"
->
+  style="max-width:60%;height:auto;">
 
 <figcaption>
 (Bildquelle: Lechner LM.VM.2023)
