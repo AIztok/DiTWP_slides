@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Datenstrukturen | Digitale Tragwerksplanung</title>
+
+  <!-- Reveal.js core -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/reveal.js@6.0.1/dist/reveal.css"
+  >
+
+  <!-- Reveal.js theme -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/reveal.js@6.0.1/dist/theme/white.css"
+    id="theme"
+  >
+
+  <!-- Code highlighting -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/reveal.js@6.0.1/dist/plugin/highlight/monokai.css"
+  >
+
+  <style>
+    /* Grundlayout wie in 001_Einleitung */
+    .reveal .slides {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .reveal figcaption {
+      font-size: 0.6em;
+      opacity: 0.7;
+    }
+
+    .reveal .attribution {
+      font-size: 0.5em;
+      opacity: 0.7;
+    }
+
+    /* Kleine Ergänzungen für diese Vorlesung */
+    .reveal .small {
+      font-size: 0.70em;
+    }
+
+    .reveal .tiny {
+      font-size: 0.55em;
+    }
+
+    .reveal .muted {
+      opacity: 0.68;
+    }
+
+    .reveal .accent {
+      color: #1769aa;
+    }
+
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2em;
+      align-items: start;
+      text-align: left;
+    }
+
+    .reveal .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8em;
+      align-items: stretch;
+    }
+
+    .reveal .card {
+      border: 1px solid #d7d7d7;
+      border-radius: 12px;
+      padding: 0.65em 0.8em;
+      background: #fafafa;
+    }
+
+    .reveal .card h3,
+    .reveal .card h4 {
+      margin-top: 0;
+    }
+
+    .reveal .callout {
+      border-left: 6px solid #1769aa;
+      padding: 0.45em 0.8em;
+      background: #f4f8fc;
+      text-align: left;
+    }
+
+    .reveal .flow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.55em;
+      flex-wrap: wrap;
+      margin-top: 0.8em;
+    }
+
+    .reveal .flow .box {
+      border: 2px solid #555;
+      border-radius: 9px;
+      padding: 0.35em 0.65em;
+      min-width: 145px;
+      background: #fff;
+    }
+
+    .reveal .flow .arrow {
+      font-size: 1.25em;
+      opacity: 0.7;
+    }
+
+    .reveal .tree {
+      font-family: Consolas, "Courier New", monospace;
+      white-space: pre;
+      text-align: left;
+      display: inline-block;
+      font-size: 0.72em;
+      line-height: 1.35;
+      padding: 0.6em 0.9em;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fbfbfb;
+    }
+
+    .reveal table.compact {
+      font-size: 0.66em;
+    }
+
+    .reveal table.compact th,
+    .reveal table.compact td {
+      padding: 0.25em 0.45em;
+    }
+
+    .reveal pre {
+      width: 96%;
+    }
+
+    .reveal pre code {
+      max-height: 520px;
+    }
+
+    .reveal .source-link {
+      margin-top: 0.7em;
+      font-size: 0.43em;
+      opacity: 0.65;
+    }
+
+    @media (max-width: 900px) {
+      .reveal .two-col,
+      .reveal .three-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+
+    <div class="slides">
+
+      <section
+        data-markdown="slides.md"
+        data-separator="^\r?\n---\r?\n$"
+        data-separator-vertical="^\r?\n--\r?\n$"
+        data-separator-notes="^Note:"
+      >
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- Reveal.js -->
+  <script src="https://unpkg.com/reveal.js@6.0.1/dist/reveal.js"></script>
+
+  <!-- Reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@6.0.1/dist/plugin/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js@6.0.1/dist/plugin/highlight.js"></script>
+  <script src="https://unpkg.com/reveal.js@6.0.1/dist/plugin/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@6.0.1/dist/plugin/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@6.0.1/dist/plugin/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@6.0.1/dist/plugin/math.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      center: true,
+
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealSearch,
+        RevealZoom,
+        RevealMath.KaTeX
+      ]
+    });
+  </script>
+
+</body>
+</html>
