@@ -637,32 +637,6 @@ Eine Klasse erbt Eigenschaften und Beziehungen von übergeordneten Klassen.
 
 --
 
-## Rooted und Non-rooted
-
-<div class="two-col">
-  <div class="card">
-    <h3>Rooted</h3>
-    <ul>
-      <li>eindeutige Identität</li>
-      <li>Name / Beschreibung</li>
-      <li>Owner History / Metadaten</li>
-      <li>für Bauwerksobjekte und Beziehungen</li>
-    </ul>
-  </div>
-
-  <div class="card fragment">
-    <h3>Non-rooted</h3>
-    <ul>
-      <li>Hilfsobjekte</li>
-      <li>Koordinaten</li>
-      <li>Vektoren</li>
-      <li>geometrische Definitionen</li>
-    </ul>
-  </div>
-</div>
-
---
-
 ## IFC ist ein Netz von Objekten
 
 <div class="flow">
@@ -800,8 +774,9 @@ Die Informationen werden auf definierte Tabellenblätter verteilt und über IDs 
 
 <iframe width="640" height="480" style="border:1px solid #eeeeee;" src="https://3dviewer.net/embed.html#model=https://raw.githubusercontent.com/AIztok/SBB/main/docs/FH_SBB_Unterug_v01.ifc$camera=-10.48394,10.67134,-18.34521,5.00000,0.00544,-6.00000,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,43,46,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"></iframe>
 
-[SAF Export FE-Modell Unterzug](https://aiztok.github.io/DiTWP/100_Informationen/130_Datenformate/135_SAF#beispiel)
---
+- [SAF Export FE-Modell Unterzug](https://aiztok.github.io/DiTWP/100_Informationen/130_Datenformate/135_SAF#beispiel)
+
+---
 
 
 ## IFC Structural und SAF
@@ -818,26 +793,6 @@ Die Informationen werden auf definierte Tabellenblätter verteilt und über IDs 
 <tr class="fragment"><td>Typischer Einsatz</td><td>openBIM / Modellintegration</td><td>CAE ↔ CAE</td></tr>
 </tbody>
 </table>
-
----
-
-## Beispiel: Export aus einer FE-Software
-
-<div class="flow">
-  <div class="box">SOFiSTiK<br>Berechnungsmodell</div>
-  <div class="arrow">→</div>
-  <div class="box fragment">SAF</div>
-  <div class="box fragment">IFC Structural</div>
-</div>
-
-<br>
-
-Fragen beim Vergleich:
-
-- Welche Elemente werden exportiert? <!-- .element: class="fragment" -->
-- Wie werden Querschnitte und Materialien gespeichert? <!-- .element: class="fragment" -->
-- Wie werden Knoten, Stäbe und Lager verknüpft? <!-- .element: class="fragment" -->
-- Welche Informationen gehen verloren? <!-- .element: class="fragment" -->
 
 ---
 
@@ -936,8 +891,6 @@ Die passende Struktur hängt ab von:
 
 --
 
-## Merksatz
-
 <div class="callout" style="font-size:1.15em;">
 <strong>Daten werden erst durch ihre Struktur und ein gemeinsames Schema zuverlässig austauschbar.</strong>
 </div>
@@ -945,7 +898,7 @@ Die passende Struktur hängt ab von:
 <br>
 
 <div class="fragment">
-In der digitalen Tragwerksplanung ist deshalb nicht nur wichtig, <strong>welche</strong> Informationen vorhanden sind, sondern auch <strong>wie</strong> sie organisiert und verknüpft sind.
+In der digitalen (Tragwerks)Planung ist deshalb nicht nur wichtig, <strong>welche</strong> Informationen vorhanden sind, sondern auch <strong>wie</strong> sie organisiert und verknüpft sind.
 </div>
 
 ---
@@ -970,4 +923,3 @@ In der digitalen Tragwerksplanung ist deshalb nicht nur wichtig, <strong>welche<
 - [135_SAF](https://aiztok.github.io/DiTWP/100_Informationen/130_Datenformate/135_SAF)
 - [Grasshopper – Datenstruktur](https://aiztok.github.io/DiTWP/000_Einfuehrung/010_Software/013_Grasshopper)
 
----
