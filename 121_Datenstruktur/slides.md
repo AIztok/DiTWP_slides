@@ -40,128 +40,30 @@ Ziel der Einheit ist nicht, alle Datenformate im Detail zu lernen. Entscheidend 
 ## Wir betrachten
 <div class="three-col">
   <div class="card fragment">
-    <h5>Grundkonzept</h5>
+    <h6>Grundkonzept</h6>
     Klassen & Objekte
   </div>
   <div class="card fragment">
-    <h5>Flache Daten</h5>
+    <h6>Flache Daten</h6>
     CSV / XLSX
   </div>
   <div class="card fragment">
-    <h4>Hierarchische Daten</h4>
+    <h6>Hierarchische Daten</h6>
     JSON
   </div>
   <div class="card fragment">
-    <h4>Parametrische Daten</h4>
+    <h6>Parametrische Daten</h6>
     Grasshopper Data Trees
   </div>
   <div class="card fragment">
-    <h4>Objektmodell</h4>
+    <h6>Objektmodell</h6>
     IFC
   </div>
   <div class="card fragment">
-    <h4>Berechnungsmodell</h4>
+    <h6>Berechnungsmodell</h6>
     SAF / IFC Structural
   </div>
 </div>
-
----
-
-## Klassen & Objekte
-### Warum das **C** in IFC wichtig ist
-
-**Industry Foundation Classes**
-
-- Klassen werden in objektorientierten Programmiersprachen verwendet. <!-- .element: class="fragment" -->
-- Eine Klasse kann als **Bauplan für Objekte** verstanden werden. <!-- .element: class="fragment" -->
-- Objekte besitzen definierte **Attribute** und können **Funktionen** besitzen. <!-- .element: class="fragment" -->
-
-Note:
-Der historische Name IFC verweist auf die objektorientierte Softwareentwicklung der 1990er Jahre. Das Beispiel bleibt bewusst einfach und soll nur das Prinzip vermitteln.
-
---
-
-## Beispiel: Klasse `Wand`
-
-```python [1|2-5|7-8]
-class Wand:
-    def __init__(self, name, material, width):
-        self.name = name
-        self.material = material
-        self.width = width
-
-    def info(self):
-        return f"{self.name}: {self.material}, d = {self.width} m"
-```
-
-<div class="callout fragment">
-Die Klasse definiert, <strong>welche Informationen</strong> ein Objekt vom Typ <code>Wand</code> besitzt.
-</div>
-
---
-
-## Aus der Klasse wird ein Objekt
-
-```python
-w1 = Wand("W001", "KLH", 0.20)
-
-print(w1.name)
-print(w1.material)
-print(w1.width)
-print(w1.info())
-```
-
-Ausgabe:
-
-```text
-W001
-KLH
-0.2
-W001: KLH, d = 0.2 m
-```
-
---
-
-## Klasse ≠ Objekt
-
-<div class="two-col">
-  <div class="card">
-    <h3>Klasse</h3>
-    <p><strong>Definition / Bauplan</strong></p>
-    <ul>
-      <li>Welche Attribute?</li>
-      <li>Welche Datentypen?</li>
-      <li>Welche Funktionen?</li>
-    </ul>
-  </div>
-
-  <div class="card fragment">
-    <h3>Objekt</h3>
-    <p><strong>Konkrete Instanz</strong></p>
-    <ul>
-      <li>Name = W001</li>
-      <li>Material = KLH</li>
-      <li>Dicke = 0.20 m</li>
-    </ul>
-  </div>
-</div>
-
---
-
-## Bezug zur BIM-Software
-
-<div class="flow">
-  <div class="box">Klasse<br><strong>Wand</strong></div>
-  <div class="arrow">→</div>
-  <div class="box fragment">Objekt<br><strong>W001</strong></div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Attribute<br><strong>Material, Dicke, ...</strong></div>
-</div>
-
-<br>
-
-- BIM-Programme implementieren Klassen in ihrer Software. <!-- .element: class="fragment" -->
-- IFC definiert standardisierte Klassen für den Datenaustausch. <!-- .element: class="fragment" -->
 
 ---
 
@@ -528,7 +430,7 @@ Data Trees sind hierarchische Datenstrukturen für zusammengehörige Datengruppe
 
 --
 
-## Beispiel aus der Tragwerksplanung
+## Beispiel
 
 Wir modellieren drei Rahmen mit jeweils vier Stützen.
 
@@ -584,6 +486,104 @@ Nach `Graft`:
 <div class="callout fragment">
 In parametrischen Modellen kann eine Änderung der Datenstruktur das Ergebnis vollständig verändern.
 </div>
+
+---
+
+## Klassen & Objekte
+### Warum das **C** in IFC wichtig ist
+
+**IFC - Industry Foundation Classes**
+
+- Klassen werden in objektorientierten Programmiersprachen verwendet. 
+- Eine Klasse kann als **Bauplan für Objekte** verstanden werden. 
+- Objekte besitzen definierte **Attribute** und können **Funktionen** besitzen. 
+
+Note:
+Der historische Name IFC verweist auf die objektorientierte Softwareentwicklung der 1990er Jahre. Das Beispiel bleibt bewusst einfach und soll nur das Prinzip vermitteln.
+
+--
+
+### Beispiel: Klasse "Wand" (Python Programmiersprache)
+
+```python [1|2-5|7-8]
+class Wand:
+    def __init__(self, name, material, width):
+        self.name = name
+        self.material = material
+        self.width = width
+
+    def info(self):
+        return f"{self.name}: {self.material}, d = {self.width} m"
+```
+
+<div class="callout fragment">
+Die Klasse definiert, <strong>welche Informationen</strong> ein Objekt vom Typ <code>Wand</code> besitzt.
+</div>
+
+--
+
+## Aus der Klasse wird ein Objekt
+
+```python
+w1 = Wand("W001", "KLH", 0.20)
+
+print(w1.name)
+print(w1.material)
+print(w1.width)
+print(w1.info())
+```
+
+Ausgabe:
+
+```text
+W001
+KLH
+0.2
+W001: KLH, d = 0.2 m
+```
+
+--
+
+## Klasse ≠ Objekt
+
+<div class="two-col">
+  <div class="card">
+    <h3>Klasse</h3>
+    <p><strong>Definition / Bauplan</strong></p>
+    <ul>
+      <li>Welche Attribute?</li>
+      <li>Welche Datentypen?</li>
+      <li>Welche Funktionen?</li>
+    </ul>
+  </div>
+
+  <div class="card fragment">
+    <h3>Objekt</h3>
+    <p><strong>Konkrete Instanz</strong></p>
+    <ul>
+      <li>Name = W001</li>
+      <li>Material = KLH</li>
+      <li>Dicke = 0.20 m</li>
+    </ul>
+  </div>
+</div>
+
+--
+
+## Bezug zur BIM-Software
+
+<div class="flow">
+  <div class="box">Klasse<br><strong>Wand</strong></div>
+  <div class="arrow">→</div>
+  <div class="box fragment">Objekt<br><strong>W001</strong></div>
+  <div class="arrow fragment">→</div>
+  <div class="box fragment">Attribute<br><strong>Material, Dicke, ...</strong></div>
+</div>
+
+<br>
+
+- BIM-Programme implementieren Klassen in ihrer Software. <!-- .element: class="fragment" -->
+- IFC definiert standardisierte Klassen für den Datenaustausch. <!-- .element: class="fragment" -->
 
 ---
 
