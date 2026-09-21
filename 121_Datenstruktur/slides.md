@@ -351,6 +351,10 @@ Ein Schema beschreibt Regeln für die Daten.
 - Pflichtfelder können definiert werden. <!-- .element: class="fragment" -->
 - Verschachtelung und Beziehungen sind definiert. <!-- .element: class="fragment" -->
 
+--
+
+[Beispiel validieren des Schemas](https://aiztok.github.io/DiTWP/100_Informationen/130_Datenformate/132_JSON#json-schema)
+
 ---
 
 ## Datenstrukturen in Grasshopper
