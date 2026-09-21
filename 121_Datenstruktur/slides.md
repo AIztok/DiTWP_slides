@@ -692,6 +692,14 @@ Die STEP-Serialisierung verwendet Referenzen wie <code>#120</code> oder <code>#1
 Note:
 Das Beispiel ist absichtlich schematisch und keine vollständige IFC-Instanz. Hier nur das Prinzip der Referenzen erläutern.
 
+--
+
+### Visualisierung der Datenstruktur im IFC
+
+https://ifcgraphviewer.onrender.com/
+
+- [Beispiel IFC Datei (Projekt IFCInfra)](https://github.com/AIztok/DiTWP_Data/blob/main/121_VO/ifcbridge-model01.ifc)
+
 ---
 
 ## Geometriemodell vs. Berechnungsmodell
