@@ -3,8 +3,6 @@
 
 **Von einzelnen Werten zu strukturierten Bauwerksinformationen**
 
-<small class="muted">121 · Vorlesung</small>
-
 Note:
 Ziel der Einheit ist nicht, alle Datenformate im Detail zu lernen. Entscheidend ist das Verständnis, warum dieselbe Information unterschiedlich strukturiert werden kann und warum Software ein gemeinsames Schema benötigt.
 
@@ -28,10 +26,10 @@ Ziel der Einheit ist nicht, alle Datenformate im Detail zu lernen. Entscheidend 
 
 ## Warum ist die Struktur wichtig?
 
-- Computer sehen zunächst nur **Daten**. <!-- .element: class="fragment" -->
-- Die Struktur liefert **Bedeutung und Beziehungen**. <!-- .element: class="fragment" -->
-- Unterschiedliche Aufgaben benötigen unterschiedliche Strukturen. <!-- .element: class="fragment" -->
-- Datenaustausch funktioniert nur, wenn Sender und Empfänger die Struktur verstehen. <!-- .element: class="fragment" -->
+- Computer sehen zunächst nur **Daten** <!-- .element: class="fragment" -->
+- Die Struktur liefert **Bedeutung und Beziehungen** <!-- .element: class="fragment" -->
+- Unterschiedliche Aufgaben benötigen unterschiedliche Strukturen <!-- .element: class="fragment" -->
+- Datenaustausch funktioniert nur, wenn Sender und Empfänger die Struktur verstehen <!-- .element: class="fragment" -->
 
 <div class="callout fragment">
 <strong>Tragwerksplanung:</strong> Koordinaten, Querschnitte, Materialien, Bauteile, Lager, Lasten und Beziehungen müssen eindeutig zuordenbar sein.
@@ -39,15 +37,14 @@ Ziel der Einheit ist nicht, alle Datenformate im Detail zu lernen. Entscheidend 
 
 --
 
-## Heute betrachten wir
-
+## Wir betrachten
 <div class="three-col">
   <div class="card fragment">
-    <h4>Grundkonzept</h4>
+    <h5>Grundkonzept</h5>
     Klassen & Objekte
   </div>
   <div class="card fragment">
-    <h4>Flache Daten</h4>
+    <h5>Flache Daten</h5>
     CSV / XLSX
   </div>
   <div class="card fragment">
@@ -803,7 +800,7 @@ Die Informationen werden auf definierte Tabellenblätter verteilt und über IDs 
 
 <iframe width="640" height="480" style="border:1px solid #eeeeee;" src="https://3dviewer.net/embed.html#model=https://raw.githubusercontent.com/AIztok/SBB/main/docs/FH_SBB_Unterug_v01.ifc$camera=-10.48394,10.67134,-18.34521,5.00000,0.00544,-6.00000,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,43,46,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"></iframe>
 
-[SAF Export FE-Modell Unterzug](https://aiztok.github.io/DiTWP/100_Informationen/120_Datenstruktur/121_VO](https://aiztok.github.io/DiTWP/100_Informationen/130_Datenformate/135_SAF#beispiel)
+[SAF Export FE-Modell Unterzug](https://aiztok.github.io/DiTWP/100_Informationen/130_Datenformate/135_SAF#beispiel)
 --
 
 
