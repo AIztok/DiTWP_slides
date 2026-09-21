@@ -1,5 +1,5 @@
-## Datenstrukturen
-### Digitale Tragwerksplanung
+## Digitale Tragwerksplanung
+### Datenstrukturen
 
 **Von einzelnen Werten zu strukturierten Bauwerksinformationen**
 
@@ -799,6 +799,14 @@ Die Informationen werden auf definierte Tabellenblätter verteilt und über IDs 
 
 --
 
+## Beispiel einer SAF Datei:
+
+<iframe width="640" height="480" style="border:1px solid #eeeeee;" src="https://3dviewer.net/embed.html#model=https://raw.githubusercontent.com/AIztok/SBB/main/docs/FH_SBB_Unterug_v01.ifc$camera=-10.48394,10.67134,-18.34521,5.00000,0.00544,-6.00000,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,43,46,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"></iframe>
+
+[SAF Export FE-Modell Unterzug](https://aiztok.github.io/DiTWP/100_Informationen/120_Datenstruktur/121_VO](https://aiztok.github.io/DiTWP/100_Informationen/130_Datenformate/135_SAF#beispiel)
+--
+
+
 ## IFC Structural und SAF
 
 <table class="compact">
@@ -893,16 +901,15 @@ Die passende Struktur hängt ab von:
   <th></th>
   <th>CSV</th>
   <th>JSON</th>
-  <th>Grasshopper</th>
   <th>IFC</th>
   <th>SAF</th>
 </tr>
 </thead>
 <tbody>
-<tr class="fragment"><td>Grundstruktur</td><td>Tabelle</td><td>Hierarchie</td><td>Tree</td><td>Objektnetz</td><td>Tabellen</td></tr>
-<tr class="fragment"><td>Verschachtelung</td><td>gering</td><td>sehr gut</td><td>sehr gut</td><td>sehr komplex</td><td>über IDs</td></tr>
-<tr class="fragment"><td>Menschenlesbar</td><td>sehr gut</td><td>gut</td><td>visuell</td><td>begrenzt</td><td>gut</td></tr>
-<tr class="fragment"><td>Typischer Zweck</td><td>einfache Daten</td><td>Datenaustausch / APIs</td><td>parametrisches Modell</td><td>Bauwerksinformation</td><td>Statikmodell</td></tr>
+<tr class="fragment"><td>Grundstruktur</td><td>Tabelle</td><td>Hierarchie</td><td>Objektnetz</td><td>Tabellen</td></tr>
+<tr class="fragment"><td>Verschachtelung</td><td>gering</td><td>sehr gut</td><td>sehr komplex</td><td>über IDs</td></tr>
+<tr class="fragment"><td>Menschenlesbar</td><td>sehr gut</td><td>gut</td><td>begrenzt</td><td>gut</td></tr>
+<tr class="fragment"><td>Typischer Zweck</td><td>einfache Daten</td><td>Datenaustausch / APIs</td><td>Bauwerksinformation</td><td>Statikmodell</td></tr>
 </tbody>
 </table>
 
@@ -967,8 +974,3 @@ In der digitalen Tragwerksplanung ist deshalb nicht nur wichtig, <strong>welche<
 - [Grasshopper – Datenstruktur](https://aiztok.github.io/DiTWP/000_Einfuehrung/010_Software/013_Grasshopper)
 
 ---
-
-## Datenstrukturen
-### Digitale Tragwerksplanung
-
-**Fragen?**
