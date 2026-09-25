@@ -1,9 +1,7 @@
-## Geometriemodell, FE-Modell & BIM
-### Digitale Tragwerksplanung
+## Digitale Tragwerksplanung
+### Geometriemodell, FE-Modell & BIM
 
 **Welche Informationen trägt welches Modell?**
-
-<small class="muted">211 · Vorlesung</small>
 
 Note:
 Leitfrage der Vorlesung: Zwei Modelle können geometrisch ähnlich aussehen und trotzdem völlig unterschiedliche Informationen tragen. Entscheidend ist nicht nur die sichtbare Form, sondern die Datenstruktur und der Zweck des Modells.
@@ -14,19 +12,19 @@ Leitfrage der Vorlesung: Zwei Modelle können geometrisch ähnlich aussehen und 
 
 <div class="three-col">
   <div class="card fragment">
-    <h3>Geometriemodell</h3>
+    <h6>Geometriemodell</h6>
     <p><strong>Wie sieht es aus?</strong></p>
     <p>Form, Lage, Abmessungen</p>
   </div>
 
   <div class="card fragment">
-    <h3>FE-Modell</h3>
+    <h6>FE-Modell</h6>
     <p><strong>Wie trägt es?</strong></p>
     <p>Steifigkeit, Lagerung, Lasten</p>
   </div>
 
   <div class="card fragment">
-    <h3>BIM-Modell</h3>
+    <h6>BIM-Modell</h6>
     <p><strong>Was ist es?</strong></p>
     <p>Klassen, Eigenschaften, Mengen</p>
   </div>
@@ -740,12 +738,13 @@ Diese Informationen können für Auswertung, Mengen- und Kostenermittlung weiter
 <div class="model-label">Halbrahmen · IFC-Modell ohne zusätzliche Psets</div>
 
 <iframe
-  class="model-frame"
-  title="Speckle – IFC geometry only"
+  src="https://www.ifcvieweronline.eu/?model=https%3A%2F%2Fraw.githubusercontent.com%2FAIztok%2FDiTWP_Data%2Frefs%2Fheads%2Fmain%2F211_VO%2FGEO%2FDiTWP_Halbrahmen_Geometrie_v00.ifc&embed=1"
+  width="100%"
+  height="520"
+  style="border:0;border-radius:12px;max-width:100%"
   loading="lazy"
-  frameborder="0"
-  allowfullscreen
-  src="https://app.speckle.systems/projects/d14f1b671c/models/988efd3a92?embedToken=d433ee5ebaccea1e7282f57d3695c4db53bb487440#embed=%7B%22isEnabled%22%3Atrue%7D">
+  allow="fullscreen"
+  title="IFC model viewer">
 </iframe>
 
 <div class="iframe-note">Bauteil auswählen und Eigenschaften im Viewer betrachten.</div>
@@ -772,12 +771,13 @@ Eine `.ifc`-Datei kann sehr unterschiedlich reich an Information sein. Die Datei
 <div class="model-label">Halbrahmen · IFC-Modell mit zusätzlichen Eigenschaften</div>
 
 <iframe
-  class="model-frame"
-  title="Speckle – IFC with Psets and Quantities"
+  src="https://www.ifcvieweronline.eu/?model=https%3A%2F%2Fraw.githubusercontent.com%2FAIztok%2FDiTWP_Data%2Frefs%2Fheads%2Fmain%2F211_VO%2FPSET%2FDiTWP_Halbrahmen_PSET_v00.ifc&embed=1"
+  width="100%"
+  height="520"
+  style="border:0;border-radius:12px;max-width:100%"
   loading="lazy"
-  frameborder="0"
-  allowfullscreen
-  src="https://app.speckle.systems/projects/d14f1b671c/models/0ccefe8958?embedToken=a8d7e6a9e27ad538d2a08e71f21e372be9bc4ad82f#embed=%7B%22isEnabled%22%3Atrue%7D">
+  allow="fullscreen"
+  title="IFC model viewer">
 </iframe>
 
 <div class="iframe-note">Element auswählen → Eigenschaften / Psets / Mengen untersuchen.</div>
