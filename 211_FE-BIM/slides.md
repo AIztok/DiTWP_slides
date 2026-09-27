@@ -320,78 +320,12 @@ Deshalb sind offene Austauschformate für Berechnungsmodelle interessant.
 
 ---
 
-## IFC Structural
-### Analytisches Tragwerksmodell in IFC
-
-IFC Structural beschreibt eine **analytische Idealisierung** für die Tragwerksanalyse.
-
-<div class="flow">
-  <div class="box fragment">Bauteil</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">analytisches Element</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Verbindung / Lager</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Last</div>
-</div>
-
---
-
-## IFC Structural · Knoten
-
-```text [1|2-3]
-#91 = IFCSTRUCTURALPOINTCONNECTION(...,'Point 1',...);
-#92 = IFCBOUNDARYNODECONDITION(
-        $, .T., .T., .T., .T., .T., .T.);
-```
-
-<div class="callout fragment">
-Ein analytischer Punkt kann gleichzeitig seine <strong>Randbedingung</strong> referenzieren.
-</div>
-
-<div class="source-link"><a href="https://github.com/AIztok/DiTWP_Data/blob/main/211_VO/DiTWP_GH_UE-1.ifc" target="_blank">IFC Structural Beispieldatei</a></div>
-
---
-
-## IFC Structural · Stäbe & Beziehungen
-
-```text [1|2-3]
-#112 = IFCSTRUCTURALCURVEMEMBER(
-  ...,'Curve 101',...,.RIGID_JOINED_MEMBER.,...);
-
-#114 = IFCRELCONNECTSSTRUCTURALMEMBER(...,#112,#91,...);
-#115 = IFCRELCONNECTSSTRUCTURALMEMBER(...,#112,#97,...);
-```
-
-<div class="callout fragment">
-IFC beschreibt nicht nur Objekte, sondern explizit auch <strong>Beziehungen zwischen Objekten</strong>.
-</div>
-
---
-
-## IFC Structural · Lasten
-
-```text [1|2-3|5-6]
-#136 = IFCSTRUCTURALLOADGROUP(...,'Nutzlast',...,.LOAD_CASE.,...);
-
-#138 = IFCSTRUCTURALPOINTACTION(...,#139,...);
-#139 = IFCSTRUCTURALLOADSINGLEFORCE($,$,$,-50.0,$,$,$);
-
-#144 = IFCSTRUCTURALLOADGROUP(...,'Wind',...,.LOAD_CASE.,...);
-```
-
-<div class="callout fragment">
-Das Austauschmodell enthält damit Information, die ein reines Geometriemodell nicht besitzt.
-</div>
-
----
-
 ## SAF
 ### Structural Analysis Format
 
 SAF verfolgt ebenfalls den Austausch analytischer Tragwerksmodelle – aber in einer **tabellarischen XLSX-Struktur**.
 
-- menschenlesbarer als STEP/IFC <!-- .element: class="fragment" -->
+- menschenlesbar <!-- .element: class="fragment" -->
 - Tabellen für Materialien, Querschnitte, Knoten, Elemente, Lasten … <!-- .element: class="fragment" -->
 - gut mit Excel / Tabellenwerkzeugen inspizierbar <!-- .element: class="fragment" -->
 
@@ -408,18 +342,6 @@ SAF verfolgt ebenfalls den Austausch analytischer Tragwerksmodelle – aber in e
 
 <div class="iframe-note">Beispiel aus dem Halbrahmen · zwischen den Tabellenblättern wechseln</div>
 <div class="source-link"><a href="https://docs.google.com/spreadsheets/d/1fQwkztkOy3m1DruOVw6Ss3YY3LC4QLDX/edit?usp=sharing" target="_blank">SAF-Datei in neuem Fenster öffnen</a></div>
-
---
-
-## IFC Structural vs. SAF
-
-| | IFC Structural | SAF |
-|---|---|---|
-| Grundstruktur | objektorientiert / relational | tabellarisch |
-| typische Datei | `.ifc` | `.xlsx` |
-| Mensch direkt lesbar | eingeschränkt | gut |
-| Beziehungen | Referenzen zwischen Entitäten | IDs / Tabellenreferenzen |
-| Ziel | offenes BIM-/Analysemodell | Austausch von Analysemodellen |
 
 ---
 
@@ -555,32 +477,3 @@ Eine `.ifc`-Datei kann sehr unterschiedlich reich an Information sein. Die Datei
 
 <div class="iframe-note">Element auswählen → Eigenschaften / Psets / Mengen untersuchen.</div>
 <div class="source-link"><a href="https://github.com/AIztok/DiTWP_Data/blob/main/211_VO/PSET/DiTWP_Halbrahmen_PSET_v00.ifc" target="_blank">IFC-Datei auf GitHub</a></div>
-
-
----
-
-## Beispiel: Ein Halbrahmen
-
-Dasselbe Übungsbeispiel kann vorliegen als:
-
-- Rhino / Grasshopper **BREP-Geometrie** <!-- .element: class="fragment" -->
-- DXF / STEP / STL **Geometrieaustausch** <!-- .element: class="fragment" -->
-- SOFiSTiK **FE-Modell** <!-- .element: class="fragment" -->
-- SAF / IFC Structural **Analysemodell-Austausch** <!-- .element: class="fragment" -->
-- IFC **BIM-Modell** <!-- .element: class="fragment" -->
-
-<div class="callout fragment">
-Das Bauwerk ist dasselbe. Die digitale Repräsentation hängt von der Aufgabe ab.
-</div>
-
----
-
-## Takeaways
-
-1. **3D ≠ BIM** <!-- .element: class="fragment" -->
-2. Ein FE-Modell ist eine **mechanische Abstraktion**. <!-- .element: class="fragment" -->
-3. Ein BIM-Modell ergänzt Geometrie um **Semantik und Beziehungen**. <!-- .element: class="fragment" -->
-4. Dateiformate transportieren immer nur die Informationen, die ihre Struktur vorsieht. <!-- .element: class="fragment" -->
-5. Für den Datenaustausch zählt nicht nur die Datei, sondern die **Interpretation der Daten**. <!-- .element: class="fragment" -->
-
-
