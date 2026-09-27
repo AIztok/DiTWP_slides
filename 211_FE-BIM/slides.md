@@ -114,7 +114,7 @@ Die Semantik ist dabei häufig für den <strong>Menschen</strong> verständlich,
 
 --
 
-## STEP · interaktives Modell
+## STEP
 
 <div class="model-label">Halbrahmen · STEP-Datei aus dem Übungsbeispiel</div>
 
@@ -152,7 +152,7 @@ Die Geometrie wird durch <strong>strukturierte Entitäten und Referenzen</strong
 
 --
 
-## STL · interaktives Modell
+## STL
 
 <div class="model-label">Dasselbe Beispiel als triangulierte Oberfläche</div>
 
@@ -166,22 +166,6 @@ Die Geometrie wird durch <strong>strukturierte Entitäten und Referenzen</strong
 
 <div class="iframe-note">Die sichtbaren Kanten zeigen die Dreiecke des STL-Netzes.</div>
 <div class="source-link"><a href="https://3dviewer.net/#model=https://raw.githubusercontent.com/AIztok/DiTWP_Data/main/211_VO/DiTWP_GH_STL_Export.stl" target="_blank">Modell in neuem Fenster öffnen</a></div>
-
---
-
-## STEP vs. STL
-
-| | STEP | STL |
-|---|---|---|
-| Grundidee | Produkt-/Geometriemodell | Dreiecksnetz |
-| Geometrie | analytisch / parametrisch möglich | diskretisiert |
-| ASCII möglich | ✓ | ✓ |
-| Semantik im Bauwesen | begrenzt | praktisch keine |
-| Fertigung | häufig | sehr häufig |
-
-<div class="callout fragment">
-Beide können die Form übertragen – aber nicht automatisch die fachliche Bedeutung eines Bauteils.
-</div>
 
 ---
 
