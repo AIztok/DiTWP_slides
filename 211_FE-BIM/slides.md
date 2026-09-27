@@ -190,19 +190,22 @@ Die Geometrie wird durch <strong>strukturierte Entitäten und Referenzen</strong
 
 <div class="two-col">
   <div class="card">
-    <h3>Geometriemodell</h3>
+    <h6>Geometriemodell</h6>
     <p>Stütze als Volumenkörper</p>
     <p>Decke als Volumenkörper</p>
   </div>
 
   <div class="card fragment">
-    <h3>FE-Modell</h3>
+    <h6>FE-Modell</h6>
     <p>Stütze → Stabachse</p>
     <p>Decke → Mittelfläche</p>
   </div>
 </div>
 
-<br>
+<img
+  src="./figures/Pasted Image 20250906232224_978.png"
+  alt="Personendurchgang_Schnitt"
+  style="max-width:80%;height:auto;">
 
 
 --
