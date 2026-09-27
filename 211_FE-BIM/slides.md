@@ -1,5 +1,5 @@
 ## Digitale Tragwerksplanung
-### Geometriemodell, FE-Modell & BIM
+### Geometriemodell, BIM-Modell, FE-Modell,...
 
 **Welche Informationen trägt welches Modell?**
 
@@ -13,22 +13,19 @@ Leitfrage der Vorlesung: Zwei Modelle können geometrisch ähnlich aussehen und 
 <div class="three-col">
   <div class="card fragment">
     <h6>Geometriemodell</h6>
-    <p><strong>Wie sieht es aus?</strong></p>
-    <p>Form, Lage, Abmessungen</p>
-  </div>
-
-  <div class="card fragment">
-    <h6>FE-Modell</h6>
-    <p><strong>Wie trägt es?</strong></p>
-    <p>Steifigkeit, Lagerung, Lasten</p>
+    <p>Form, Lage, Abmessungen,...</p>
   </div>
 
   <div class="card fragment">
     <h6>BIM-Modell</h6>
-    <p><strong>Was ist es?</strong></p>
-    <p>Klassen, Eigenschaften, Mengen</p>
+    <p>Klassen, Eigenschaften, Beziehungen, Mengen,...</p>
   </div>
 </div>
+
+  <div class="card fragment">
+    <h6>FE-Modell</h6>
+    <p>Statische Abmessungen, Lagerung, Lasten, Schnittgrößen, Bemessung</p>
+  </div>
 
 --
 
@@ -36,37 +33,9 @@ Leitfrage der Vorlesung: Zwei Modelle können geometrisch ähnlich aussehen und 
 
 > Welche **Informationen** benötigt ein Modell, um seinen Zweck zu erfüllen?
 
-<div class="flow">
-  <div class="box fragment">Geometrie</div>
-  <div class="arrow fragment">+</div>
-  <div class="box fragment">Semantik</div>
-  <div class="arrow fragment">+</div>
-  <div class="box fragment">Mechanik</div>
-  <div class="arrow fragment">+</div>
-  <div class="box fragment">Ergebnisse</div>
-</div>
-
-<br>
-
 <div class="callout fragment">
 Dasselbe Bauwerk kann je nach Aufgabe in <strong>unterschiedlichen digitalen Repräsentationen</strong> vorliegen.
 </div>
-
---
-
-## Nicht jedes Modell braucht alles
-
-| Information | Geometrie | FE | BIM |
-|---|:---:|:---:|:---:|
-| Koordinaten / Form | ✓ | ✓ | ✓ |
-| Material | optional | ✓ | ✓ |
-| Lagerbedingungen | – | ✓ | optional |
-| Lasten | – | ✓ | optional |
-| Bauteilklasse | – | optional | ✓ |
-| Property Sets | – | – | ✓ |
-| Schnittgrößen | – | ✓ | – |
-
-<small class="muted">Die genaue Abgrenzung hängt vom konkreten Datenmodell und der Software ab.</small>
 
 ---
 
@@ -82,58 +51,6 @@ Die Basis der Bauwerksplanung ist häufig die **Geometrie**.
 - Abmessungen <!-- .element: class="fragment" -->
 
 --
-
-## 2D oder 3D
-
-<div class="two-col">
-  <div class="card">
-    <h3>2D</h3>
-    <ul>
-      <li>Grundriss</li>
-      <li>Schnitt</li>
-      <li>Ansicht</li>
-      <li>Planableitung</li>
-    </ul>
-  </div>
-
-  <div class="card fragment">
-    <h3>3D</h3>
-    <ul>
-      <li>Punkte</li>
-      <li>Kurven</li>
-      <li>Flächen</li>
-      <li>Volumenkörper</li>
-    </ul>
-  </div>
-</div>
-
-<div class="callout fragment">
-Ein 3D-Modell ist noch nicht automatisch ein BIM-Modell.
-</div>
-
---
-
-## BREP – Boundary Representation
-
-Ein Volumenkörper kann über seine **Begrenzungsflächen** beschrieben werden.
-
-<div class="flow">
-  <div class="box fragment">Vertices<br><small>Punkte</small></div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Edges<br><small>Kanten</small></div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Faces<br><small>Flächen</small></div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">BREP<br><small>Körper</small></div>
-</div>
-
-<br>
-
-- in Rhino sehr gebräuchlich <!-- .element: class="fragment" -->
-- Flächen können eben oder gekrümmt sein <!-- .element: class="fragment" -->
-- beschreibt primär die **Geometrie** <!-- .element: class="fragment" -->
-
----
 
 ## DWG & DXF
 ### Geometrischer Datenaustausch im Bauwesen
