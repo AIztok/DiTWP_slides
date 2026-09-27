@@ -72,7 +72,7 @@ In klassischen Plänen wird Bedeutung oft zusätzlich kodiert
 <img
   src="./figures/Personendurchgang_Schnitt.png"
   alt="Personendurchgang_Schnitt"
-  style="max-width:60%;height:auto;">
+  style="max-width:80%;height:auto;">
 
 --
 
