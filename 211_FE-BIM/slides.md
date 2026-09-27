@@ -67,42 +67,31 @@ Typische Inhalte:
 
 ## Information steckt nicht nur in Linien
 
-In klassischen Plänen wird Bedeutung oft zusätzlich kodiert durch:
+In klassischen Plänen wird Bedeutung oft zusätzlich kodiert 
 
-- **Text** und numerische Angaben <!-- .element: class="fragment" -->
-- **Layer** <!-- .element: class="fragment" -->
-- **Linientypen** und Legenden <!-- .element: class="fragment" -->
-- **Farben** <!-- .element: class="fragment" -->
+<img
+  src="./figures/Personendurchgang_Schnitt.png"
+  alt="Personendurchgang_Schnitt"
+  style="max-width:60%;height:auto;">
+
+--
+
+<img
+  src="./figures/211_2D-Plan_Legende.png"
+  alt="2D-Plan_Legende"
+  style="max-width:60%;height:auto;">
+
+--
+
+- Text und numerische Angaben <!-- .element: class="fragment" -->
+- Layer <!-- .element: class="fragment" -->
+- Linientypen und Legenden <!-- .element: class="fragment" -->
+- Farben <!-- .element: class="fragment" -->
 - Verweise auf weitere Dokumente <!-- .element: class="fragment" -->
 
 <div class="callout fragment">
 Die Semantik ist dabei häufig für den <strong>Menschen</strong> verständlich, aber nicht zwingend maschinenlesbar eindeutig.
 </div>
-
---
-
-## Beispiel: Farbe als Information
-
-<div class="three-col">
-  <div class="card fragment">
-    <h4>Rot</h4>
-    Neubau
-  </div>
-  <div class="card fragment">
-    <h4>Gelb</h4>
-    Rückbau
-  </div>
-  <div class="card fragment">
-    <h4>Schwarz</h4>
-    Bestand
-  </div>
-</div>
-
-<br>
-
-**Problem:** <!-- .element: class="fragment" -->
-
-Ein Computer erkennt zunächst nur eine Farbe – die Bedeutung entsteht erst durch eine **Konvention / Legende**. <!-- .element: class="fragment" -->
 
 ---
 
