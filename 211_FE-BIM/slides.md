@@ -259,7 +259,7 @@ Ein FE-Programm besitzt meist weit mehr Information, als in einer einzelnen Eing
 
 <div class="two-col">
   <div class="card fragment">
-    <h3>Modelldatei</h3>
+    <h6>Modelldatei</h6>
     <ul>
       <li>Materialnummern</li>
       <li>Querschnitte</li>
@@ -269,7 +269,7 @@ Ein FE-Programm besitzt meist weit mehr Information, als in einer einzelnen Eing
   </div>
 
   <div class="card fragment">
-    <h3>Software</h3>
+    <h6>Software</h6>
     <ul>
       <li>Materialdatenbanken</li>
       <li>Profilkataloge</li>
@@ -298,123 +298,6 @@ Ein FE-Programm besitzt meist weit mehr Information, als in einer einzelnen Eing
 - Ergebnisse müssen wieder Elementen / Knoten zugeordnet werden <!-- .element: class="fragment" -->
 
 ---
-
-## Beispiel SOFiSTiK
-### Eingabedatei `.dat` / `.sofistik`
-
-Die Eingabe kann vollständig als **ASCII-Text** formuliert werden.
-
-```text [1-3|5-8]
-+PROG AQUA
-HEAD 'Materialangabe'
-NORM OEN en199X-200X
-
-CONC NO 1 TYPE C 30N TITL 'Beton C30/37'
-STEE NO 101 TYPE B 550B TITL 'Bewehrung B550B'
-
-END
-```
-
---
-
-## Querschnitt als Daten
-
-```text [1|2-6]
-SECT 2 MNO 1 TITL 'Decke'
-POLY TYPE O
-VERT '10' -0.5  0.15
-VERT '20' -0.5 -0.15
-VERT '30'  0.5 -0.15
-VERT '40'  0.5  0.15
-```
-
-Was steht hier? <!-- .element: class="fragment" -->
-
-- Querschnittsnummer <!-- .element: class="fragment" -->
-- Materialreferenz <!-- .element: class="fragment" -->
-- Name <!-- .element: class="fragment" -->
-- Geometrie über Eckpunkte <!-- .element: class="fragment" -->
-
---
-
-## Strukturpunkte
-
-```text [1|2-5]
-// Structural Points
-SPT 1 X 0.0 0.0 0.00 FIX PXPYPZMXMYMZ
-SPT 2 X 0.0 0.0 3.15
-SPT 3 X 3.0 0.0 3.15
-SPT 4 X 6.0 0.0 3.15 FIX PZ
-```
-
-<div class="callout fragment">
-Ein FE-Knoten braucht nicht nur Koordinaten – er kann auch <strong>Randbedingungen</strong> tragen.
-</div>
-
---
-
-## Strukturlinien
-
-```text [1-2|3-6]
-SLN 101 GRP 1 SNO 1
- SLNB X1 0.0 0.0 0.00 X2 0.0 0.0 3.15
-
-SLN 102 GRP 1 SNO 2
- SLNB X1 0.0 0.0 3.15 X2 3.0 0.0 3.15
-```
-
-- `SNO` referenziert den Querschnitt <!-- .element: class="fragment" -->
-- Linien werden später in FE-Elemente diskretisiert <!-- .element: class="fragment" -->
-- Beziehungen zwischen Datensätzen sind entscheidend <!-- .element: class="fragment" -->
-
---
-
-## Lastfälle und Lasten
-
-```text [1-2|4-5|7-9]
-LC 1 TYPE G TITL 'EGW'
-
-LC 10 TYPE Q TITL 'Nutzlast'
-POIN AUTO - TYPE PZZ -50.0 X 3.0 0.0 3.15
-
-LC 20 TYPE W TITL 'Wind'
-LINE AUTO - TYPE PZZ -0.8
-  X1 0.0 0.0 3.15 X2 3.0 0.0 3.15
-```
-
-<div class="callout fragment">
-Geometrie allein reicht für die Tragwerksberechnung nicht aus.
-</div>
-
---
-
-## SOFiSTiK-Dateien im Beispiel
-
-<div class="three-col">
-  <div class="card fragment">
-    <h3>.dat</h3>
-    <strong>Eingabe</strong><br>
-    ASCII / Preprocessing
-  </div>
-  <div class="card fragment">
-    <h3>.cdb</h3>
-    <strong>Datenbasis</strong><br>
-    Modell + Berechnungsdaten
-  </div>
-  <div class="card fragment">
-    <h3>.plb</h3>
-    <strong>Ausgabe</strong><br>
-    Bericht
-  </div>
-</div>
-
-<br>
-
-<div class="callout fragment">
-Die berechneten Ergebnisse entstehen erst nach der Eingabe und werden in der Datenbasis gespeichert.
-</div>
-
---
 
 ## Proprietäre Datenbasis
 
