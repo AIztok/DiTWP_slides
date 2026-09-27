@@ -172,7 +172,7 @@ Die Geometrie wird durch <strong>strukturierte Entitäten und Referenzen</strong
 ## 2 · FE-Modell
 ### Vom Baukörper zum Berechnungsmodell
 
-> Das FE-Modell ist eine **mechanische Abstraktion** des realen Tragwerks.
+> Das FE-Modell ist eine **Abstraktion** des realen Tragwerks.
 
 <div class="flow">
   <div class="box fragment">reales Bauteil</div>
@@ -204,9 +204,6 @@ Die Geometrie wird durch <strong>strukturierte Entitäten und Referenzen</strong
 
 <br>
 
-<div class="callout fragment">
-Weniger geometrische Information – dafür mehr <strong>mechanische Information</strong>.
-</div>
 
 --
 
@@ -214,27 +211,27 @@ Weniger geometrische Information – dafür mehr <strong>mechanische Information
 
 <div class="three-col">
   <div class="card fragment">
-    <h4>Material</h4>
+    <h6>Material</h6>
     E-Modul, Wichte, Festigkeit …
   </div>
   <div class="card fragment">
-    <h4>Querschnitt</h4>
-    A, Iy, Iz, Torsion …
+    <h6>Querschnitt</h6>
+    A, Iy, Iz …
   </div>
   <div class="card fragment">
-    <h4>System</h4>
+    <h6>System</h6>
     Knoten, Elemente, Lager
   </div>
   <div class="card fragment">
-    <h4>Lasten</h4>
+    <h6>Lasten</h6>
     Lastfälle, Einwirkungen
   </div>
   <div class="card fragment">
-    <h4>Regeln</h4>
+    <h6>Regeln</h6>
     Kombination, Norm
   </div>
   <div class="card fragment">
-    <h4>Ergebnisse</h4>
+    <h6>Ergebnisse</h6>
     u, N, V, M, σ …
   </div>
 </div>
@@ -673,99 +670,6 @@ Eine `.ifc`-Datei kann sehr unterschiedlich reich an Information sein. Die Datei
 <div class="iframe-note">Element auswählen → Eigenschaften / Psets / Mengen untersuchen.</div>
 <div class="source-link"><a href="https://github.com/AIztok/DiTWP_Data/blob/main/211_VO/PSET/DiTWP_Halbrahmen_PSET_v00.ifc" target="_blank">IFC-Datei auf GitHub</a></div>
 
---
-
-## Gleiche Geometrie – mehr Information
-
-<div class="two-col">
-  <div class="card">
-    <h3>Geometrie-IFC</h3>
-    <ul>
-      <li>Form</li>
-      <li>Lage</li>
-      <li>Bauteilobjekte</li>
-    </ul>
-  </div>
-
-  <div class="card fragment">
-    <h3>IFC + Psets / Qto</h3>
-    <ul>
-      <li>Form + Lage</li>
-      <li>Klassen</li>
-      <li>Eigenschaften</li>
-      <li>Mengen</li>
-    </ul>
-  </div>
-</div>
-
-<div class="callout fragment">
-Der sichtbare 3D-Körper kann gleich bleiben – die <strong>Informationsdichte</strong> ändert sich.
-</div>
-
----
-
-## Geometriemodell ↔ FE-Modell ↔ BIM
-
-<table class="compact">
-<thead>
-<tr>
-<th></th><th>Geometrie</th><th>FE</th><th>BIM</th>
-</tr>
-</thead>
-<tbody>
-<tr class="fragment"><td><strong>Zweck</strong></td><td>Form darstellen</td><td>Tragverhalten berechnen</td><td>Bauwerksinformation organisieren</td></tr>
-<tr class="fragment"><td><strong>Kernobjekte</strong></td><td>Punkte, Kurven, Flächen, Körper</td><td>Knoten, FE-Elemente, Lager, Lasten</td><td>Bauteile, Klassen, Psets, Beziehungen</td></tr>
-<tr class="fragment"><td><strong>typische Formate</strong></td><td>DXF, DWG, STEP, STL</td><td>programmspezifisch, SAF, IFC Structural</td><td>IFC</td></tr>
-<tr class="fragment"><td><strong>Ergebnisse</strong></td><td>–</td><td>u, N, V, M, σ …</td><td>Mengen / Auswertungen</td></tr>
-</tbody>
-</table>
-
---
-
-## Überschneidungen sind normal
-
-Die Kategorien sind **keine vollständig getrennten Welten**.
-
-- BIM kann Geometrie enthalten <!-- .element: class="fragment" -->
-- IFC kann ein analytisches Modell enthalten <!-- .element: class="fragment" -->
-- FE-Software besitzt oft leistungsfähige geometrische Preprozessoren <!-- .element: class="fragment" -->
-- CAD-/BIM-Software kann Analyseinformationen speichern <!-- .element: class="fragment" -->
-
-<div class="callout fragment">
-Entscheidend ist immer: <strong>Welche Information wird tatsächlich übertragen?</strong>
-</div>
-
----
-
-## Informationsverlust beim Austausch
-
-<div class="flow">
-  <div class="box fragment">Software A</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Austauschformat</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Software B</div>
-</div>
-
-<br>
-
-Mögliche Probleme: <!-- .element: class="fragment" -->
-
-- Information existiert nur in Software A <!-- .element: class="fragment" -->
-- Austauschformat kennt diese Information nicht <!-- .element: class="fragment" -->
-- Software B interpretiert sie anders <!-- .element: class="fragment" -->
-
---
-
-## Interoperabilität
-
-> Interoperabilität bedeutet nicht nur, dass eine Datei geöffnet werden kann.
-
-Sie bedeutet, dass die benötigte Information:
-
-1. übertragen, <!-- .element: class="fragment" -->
-2. richtig interpretiert und <!-- .element: class="fragment" -->
-3. sinnvoll weiterverwendet werden kann. <!-- .element: class="fragment" -->
 
 ---
 
@@ -793,22 +697,4 @@ Das Bauwerk ist dasselbe. Die digitale Repräsentation hängt von der Aufgabe ab
 4. Dateiformate transportieren immer nur die Informationen, die ihre Struktur vorsieht. <!-- .element: class="fragment" -->
 5. Für den Datenaustausch zählt nicht nur die Datei, sondern die **Interpretation der Daten**. <!-- .element: class="fragment" -->
 
---
 
-## Die Frage für jedes digitale Modell
-
-> **Welche Information steckt tatsächlich darin?**
-
-<br>
-
-<div class="flow">
-  <div class="box fragment">sehen</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">verstehen</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">weiterverwenden</div>
-</div>
-
-<br>
-
-### Digitale Tragwerksplanung
