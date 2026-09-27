@@ -477,3 +477,11 @@ Eine `.ifc`-Datei kann sehr unterschiedlich reich an Information sein. Die Datei
 
 <div class="iframe-note">Element auswählen → Eigenschaften / Psets / Mengen untersuchen.</div>
 <div class="source-link"><a href="https://github.com/AIztok/DiTWP_Data/blob/main/211_VO/PSET/DiTWP_Halbrahmen_PSET_v00.ifc" target="_blank">IFC-Datei auf GitHub</a></div>
+
+--
+
+Wir schauen uns ein IFC Modell an:
+
+https://www.ifclite.com/
+[Modell Halbrahmen IFC](https://github.com/AIztok/DiTWP_Data/blob/main/211_VO/PSET/DiTWP_Halbrahmen_PSET_v00.ifc)
+
