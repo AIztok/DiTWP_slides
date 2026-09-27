@@ -210,6 +210,19 @@ Die Geometrie wird durch <strong>strukturierte Entitäten und Referenzen</strong
 
 --
 
+## FE kann auch 3D sein
+
+- Volumenelemente
+- Bewehrung Stabelemente
+- Modellierung und Auswertung Aufwendig
+
+<img
+  src="./figures/211_FE_Volume.png"
+  alt="FE Volume"
+  style="max-width:80%;height:auto;">
+
+--
+
 ## Was benötigt ein FE-Modell?
 
 <div class="three-col">
@@ -300,7 +313,7 @@ Ein FE-Programm besitzt meist weit mehr Information, als in einer einzelnen Eing
 - Berechnung erzeugt zusätzliche Daten <!-- .element: class="fragment" -->
 - Ergebnisse müssen wieder Elementen / Knoten zugeordnet werden <!-- .element: class="fragment" -->
 
----
+--
 
 ## Proprietäre Datenbasis
 
@@ -459,7 +472,7 @@ Beim Selektieren von Decke oder Wand:
 Eine `.ifc`-Datei kann sehr unterschiedlich reich an Information sein. Die Dateiendung allein sagt wenig über die Informationsqualität aus.
 </div>
 
----
+--
 
 ## IFC · mit Psets & Quantities
 
