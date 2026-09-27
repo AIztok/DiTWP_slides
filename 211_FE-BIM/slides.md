@@ -204,8 +204,8 @@ Die Geometrie wird durch <strong>strukturierte Entitäten und Referenzen</strong
 
 <img
   src="./figures/Pasted Image 20250906232224_978.png"
-  alt="Personendurchgang_Schnitt"
-  style="max-width:80%;height:auto;">
+  alt="FE Rahmen"
+  style="max-width:60%;height:auto;">
 
 
 --
@@ -219,7 +219,7 @@ Die Geometrie wird durch <strong>strukturierte Entitäten und Referenzen</strong
 <img
   src="./figures/211_FE_Volume.png"
   alt="FE Volume"
-  style="max-width:80%;height:auto;">
+  style="max-width:60%;height:auto;">
 
 --
 
