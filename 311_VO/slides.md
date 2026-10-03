@@ -3,8 +3,6 @@
 
 **Wie bleiben digitale Informationen nachvollziehbar, teilbar und vergleichbar?**
 
-<small class="muted">311 · Vorlesung · ca. 90 min</small>
-
 Note:
 Roter Faden: Wir beginnen bei der einfachsten Form der Verwaltung – dem Dateinamen – und gehen schrittweise zu CDE, Git, modellbasierter Versionsverwaltung und Schnittstellen über.
 
@@ -35,19 +33,6 @@ Roter Faden: Wir beginnen bei der einfachsten Form der Verwaltung – dem Datein
 
 Note:
 Einstieg über ein alltägliches Problem. Ziel: zeigen, dass Versionsverwaltung kein Softwarethema ist, sondern Informationsmanagement.
-
---
-
-## Lernziele
-
-Nach dieser Einheit sollen Sie erklären können:
-
-- wie Dateinamen **Information strukturieren** <!-- .element: class="fragment" -->
-- warum **Version, Revision und Status** nicht dasselbe sind <!-- .element: class="fragment" -->
-- was ein **CDE** im Projekt leistet <!-- .element: class="fragment" -->
-- wie **Git, Branch, Commit, Pull Request und Merge** zusammenhängen <!-- .element: class="fragment" -->
-- warum **Text-Diff ≠ Modell-Diff** ist <!-- .element: class="fragment" -->
-- wie sich Datei-, Repository-, Modell- und API-Schnittstellen unterscheiden <!-- .element: class="fragment" -->
 
 ---
 
@@ -534,23 +519,6 @@ Speckle arbeitet mit strukturierten Modellobjekten statt nur mit Dateien.
 Git ist eine gute Analogie – technisch ist Speckle aber keine einfache „Git-Version für 3D-Dateien“.
 </div>
 
---
-
-## Datei-Diff vs. Modell-Diff
-
-<div class="two-col">
-  <div class="card">
-    <h3>Git</h3>
-    <p><strong>Datei / Text</strong></p>
-    <p>„Welche Zeilen oder Dateien änderten sich?“</p>
-  </div>
-  <div class="card fragment">
-    <h3>Speckle / IfcDiff</h3>
-    <p><strong>Objekt / Modell</strong></p>
-    <p>„Welche Bauteile oder Eigenschaften änderten sich?“</p>
-  </div>
-</div>
-
 ---
 
 ## 10 · Schnittstellen
@@ -567,28 +535,6 @@ Eine Schnittstelle definiert, **wie Information zwischen Systemen übertragen wi
 </tbody>
 </table>
 
---
-
-## Der rote Faden
-
-<div class="flow">
-  <div class="box fragment">Dateiname</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">CDE</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Git</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">IFC-Diff</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Speckle / API</div>
-</div>
-
-<br>
-
-<div class="callout fragment">
-Mit zunehmender Digitalisierung verschiebt sich die Frage von <strong>„Welche Datei ist neu?“</strong> zu <strong>„Welche Information hat sich fachlich geändert?“</strong>.
-</div>
-
 ---
 
 ## Takeaways
@@ -600,20 +546,3 @@ Mit zunehmender Digitalisierung verschiebt sich die Frage von <strong>„Welche 
 - Binärdateien können versioniert werden, aber sind schwerer zu vergleichen. <!-- .element: class="fragment" -->
 - IFC-SPF ist textbasiert, trotzdem ist ein **semantischer Modelldiff** oft aussagekräftiger als ein Textdiff. <!-- .element: class="fragment" -->
 - Schnittstellen können datei-, repository-, objekt- oder API-basiert sein. <!-- .element: class="fragment" -->
-
---
-
-## Weiterführende Quellen
-
-<div class="small" style="text-align:left">
-
-- DiTWP · 311_VO: https://aiztok.github.io/DiTWP/300_Informationen_teilen/310_Verwalten-and-Schnittstellen/311_VO
-- UK BIM Framework · Guidance Part C: Common Data Environment
-- GitHub Docs · Branches, Pull Requests, Merge Conflicts, Git LFS
-- buildingSMART · IFC Formats / Software Identity
-- IfcOpenShell · IfcDiff
-- Speckle Docs · Compare Versions
-
-</div>
-
-<div class="source-link">Die Beispiele und Screenshots stammen – soweit nicht anders angegeben – aus der DiTWP-Kursseite.</div>
