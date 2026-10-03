@@ -1,5 +1,5 @@
-## Verwalten & Schnittstellen
-### Digitale Tragwerksplanung
+## Digitale Tragwerksplanung
+### Verwalten & Schnittstellen
 
 **Wie bleiben digitale Informationen nachvollziehbar, teilbar und vergleichbar?**
 
@@ -22,14 +22,19 @@ Roter Faden: Wir beginnen bei der einfachsten Form der Verwaltung – dem Datein
       <li class="fragment">Was hat sich fachlich geändert?</li>
     </ul>
   </div>
-  <div class="fragment">
-    <img class="image-small" src="https://aiztok.github.io/DiTWP/Bilder/311_Datenname.png" alt="XKCD file naming">
-    <div class="attribution">Quelle: XKCD 1459, eingebunden über DiTWP</div>
+
+  <div>
+    <img
+      class="image-small"
+      src="https://aiztok.github.io/DiTWP/Bilder/311_Datenname.png"
+      alt="XKCD file naming"
+    >
+    <div class="attribution">Quelle: XKCD 1459</div>
   </div>
 </div>
 
 Note:
-Guter Einstieg über ein alltägliches Problem. Ziel: zeigen, dass Versionsverwaltung kein Softwarethema ist, sondern Informationsmanagement.
+Einstieg über ein alltägliches Problem. Ziel: zeigen, dass Versionsverwaltung kein Softwarethema ist, sondern Informationsmanagement.
 
 --
 
