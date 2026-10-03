@@ -47,13 +47,14 @@ Ein guter Dateiname beantwortet bereits mehrere Fragen.
   <div class="arrow fragment">+</div>
   <div class="box fragment">Bauteil</div>
   <div class="arrow fragment">+</div>
+  <div class="box fragment">Inhalt/Plantyp/...</div>
   <div class="box fragment">Status / Version</div>
 </div>
 
 <br>
 
 ```text
-DiTWP_ZBW-W_LT_V01_2026-09-16.ifc
+DiTWP_ZBW-W_LT_SP_V01.pdf
 ```
 
 --
@@ -62,9 +63,11 @@ DiTWP_ZBW-W_LT_V01_2026-09-16.ifc
 
 - kurz, eindeutig und dokumentiert <!-- .element: class="fragment" -->
 - konsistente Codes und Abkürzungen <!-- .element: class="fragment" -->
-- ISO-Datum `YYYY-MM-DD`, wenn Datum relevant ist <!-- .element: class="fragment" -->
+- ISO-Datum YYYY-MM-DD oder YYYYMMDD, wenn Datum relevant ist <!-- .element: class="fragment" -->
 - Leerzeichen und Sonderzeichen möglichst vermeiden <!-- .element: class="fragment" -->
-- Konvention in einer `README.md` dokumentieren <!-- .element: class="fragment" -->
+- Konvention in einer README/Anweisung dokumentieren <!-- .element: class="fragment" -->
+
+--
 
 <div class="callout fragment">
 Der Zweck ist nicht „schöne Dateinamen“, sondern <strong>eindeutige, sortierbare und maschinenlesbare Information</strong>.
@@ -95,7 +98,7 @@ Die konkrete Codierung ist projektabhängig. Entscheidend ist, dass Bedeutung un
 
 <div class="two-col">
   <div class="card">
-    <h3>Intern</h3>
+    <h6>Intern</h6>
     <ul>
       <li>Arbeitsordner</li>
       <li>persönliche Bereiche</li>
@@ -104,17 +107,16 @@ Die konkrete Codierung ist projektabhängig. Entscheidend ist, dass Bedeutung un
     </ul>
   </div>
   <div class="card fragment">
-    <h3>Extern</h3>
+    <h6>Extern</h6>
     <ul>
       <li>Planmanagement</li>
       <li>Prüf- und Freigabeprozesse</li>
-      <li>EPLASS / EXAKT / CDES</li>
       <li>Projektplattform / CDE</li>
     </ul>
   </div>
 </div>
 
---
+---
 
 ## Common Data Environment · CDE
 
@@ -151,25 +153,6 @@ Ein CDE ist kein bestimmtes Produkt, sondern ein **gemeinsamer Informationsproze
 Nicht nur die Datei ist wichtig – auch <strong>Zustand, Verantwortlichkeit und Freigabe</strong> gehören zur Information.
 </div>
 
---
-
-## CDE und Git: ähnliche Prinzipien
-
-<table class="compact">
-<thead><tr><th>Bauwesen</th><th>Softwareentwicklung</th></tr></thead>
-<tbody>
-<tr class="fragment"><td>Arbeitsstand</td><td>Branch / lokaler Arbeitsstand</td></tr>
-<tr class="fragment"><td>Version / Änderung</td><td>Commit</td></tr>
-<tr class="fragment"><td>Prüfung / Freigabe</td><td>Review / Pull Request</td></tr>
-<tr class="fragment"><td>Zusammenführen</td><td>Merge</td></tr>
-<tr class="fragment"><td>Projektplattform</td><td>Repository-Plattform</td></tr>
-</tbody>
-</table>
-
-<div class="warning fragment">
-Das ist eine <strong>Analogie</strong>, keine 1:1-Abbildung. Ein CDE ersetzt Git nicht – und Git ersetzt keinen projektspezifischen Freigabeprozess.
-</div>
-
 ---
 
 ## 3 · Was ist Git?
@@ -180,36 +163,9 @@ Das ist eine <strong>Analogie</strong>, keine 1:1-Abbildung. Ein CDE ersetzt Git
 - jede Änderung kann beschrieben werden <!-- .element: class="fragment" -->
 - mehrere Arbeitsstände können parallel existieren <!-- .element: class="fragment" -->
 - Historie bleibt reproduzierbar <!-- .element: class="fragment" -->
-- lokal nutzbar – ein Onlinedienst ist nicht zwingend nötig <!-- .element: class="fragment" -->
 
 --
 
-## Git ≠ GitHub
-
-<div class="two-col">
-  <div class="card">
-    <h3>Git</h3>
-    <ul>
-      <li>Versionskontrolle</li>
-      <li>Commits</li>
-      <li>Branches</li>
-      <li>Merges</li>
-      <li>lokal verwendbar</li>
-    </ul>
-  </div>
-  <div class="card fragment">
-    <h3>GitHub / GitLab</h3>
-    <ul>
-      <li>Hosting von Repositories</li>
-      <li>Benutzer & Rechte</li>
-      <li>Pull Requests</li>
-      <li>Reviews</li>
-      <li>Zusammenarbeit online</li>
-    </ul>
-  </div>
-</div>
-
---
 
 ## Commit = nachvollziehbarer Zustand
 
@@ -501,6 +457,25 @@ diff.export()
 ```
 
 <div class="source-link">IfcOpenShell · IfcDiff</div>
+
+---
+
+## CDE und Git: ähnliche Prinzipien
+
+<table class="compact">
+<thead><tr><th>Bauwesen</th><th>Softwareentwicklung</th></tr></thead>
+<tbody>
+<tr class="fragment"><td>Arbeitsstand</td><td>Branch / lokaler Arbeitsstand</td></tr>
+<tr class="fragment"><td>Version / Änderung</td><td>Commit</td></tr>
+<tr class="fragment"><td>Prüfung / Freigabe</td><td>Review / Pull Request</td></tr>
+<tr class="fragment"><td>Zusammenführen</td><td>Merge</td></tr>
+<tr class="fragment"><td>Projektplattform</td><td>Repository-Plattform</td></tr>
+</tbody>
+</table>
+
+<div class="warning fragment">
+Das ist eine <strong>Analogie</strong>, keine 1:1-Abbildung. Ein CDE ersetzt Git nicht – und Git ersetzt keinen projektspezifischen Freigabeprozess.
+</div>
 
 ---
 
