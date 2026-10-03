@@ -17,7 +17,6 @@ Roter Faden: Wir beginnen bei der einfachsten Form der Verwaltung – dem Datein
       <li class="fragment">Wann wurde es geändert?</li>
       <li class="fragment">Warum wurde es geändert?</li>
       <li class="fragment">Welche Version ist gültig?</li>
-      <li class="fragment">Was hat sich fachlich geändert?</li>
     </ul>
   </div>
 
