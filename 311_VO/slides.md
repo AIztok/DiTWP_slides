@@ -48,6 +48,7 @@ Ein guter Dateiname beantwortet bereits mehrere Fragen.
   <div class="box fragment">Bauteil</div>
   <div class="arrow fragment">+</div>
   <div class="box fragment">Inhalt/Plantyp/...</div>
+  <div class="arrow fragment">+</div>
   <div class="box fragment">Status / Version</div>
 </div>
 
@@ -96,7 +97,7 @@ Die konkrete Codierung ist projektabhängig. Entscheidend ist, dass Bedeutung un
 
 ## 2 · Versionsverwaltung im Bauprojekt
 
-<div class="two-col">
+<div class="two-col small">
   <div class="card">
     <h6>Intern</h6>
     <ul>
@@ -255,114 +256,13 @@ Fachmodelle werden häufig <strong>referenziert, föderiert und koordiniert</str
   <div class="box fragment">Merge</div>
 </div>
 
-Note:
-Hier nicht die GitHub-Oberfläche erklären, sondern das Prinzip. Die Klickschritte gehören in die Übung bzw. die Git-Unterseite.
-
 ---
-
-## 5 · Pull Request & Review
-
-Ein Pull Request ist eine **Änderungsanfrage**.
-
-- Welche Änderungen sollen übernommen werden? <!-- .element: class="fragment" -->
-- Welche Dateien sind betroffen? <!-- .element: class="fragment" -->
-- Was wurde hinzugefügt / gelöscht? <!-- .element: class="fragment" -->
-- Gibt es Kommentare oder Rückfragen? <!-- .element: class="fragment" -->
-- Ist ein Merge technisch möglich? <!-- .element: class="fragment" -->
-
---
 
 ## Diff: Änderungen sichtbar machen
 
 <img class="image-wide" src="https://aiztok.github.io/DiTWP/Bilder/Pasted-image-20240930125622.png" alt="GitHub diff example">
 
 <div class="attribution">Beispiel aus der DiTWP-Seite: Änderungen einer Markdown-Datei in GitHub.</div>
-
----
-
-## 6 · Merge-Konflikte
-
-Git kann viele Änderungen automatisch zusammenführen.
-
-Ein Konflikt entsteht typischerweise, wenn:
-
-- dieselbe Zeile unterschiedlich geändert wurde <!-- .element: class="fragment" -->
-- eine Datei auf einer Seite gelöscht und auf der anderen geändert wurde <!-- .element: class="fragment" -->
-- Git nicht eindeutig entscheiden kann, welcher Inhalt gelten soll <!-- .element: class="fragment" -->
-
---
-
-## GitHub erkennt den Konflikt
-
-<img class="image-wide" src="https://aiztok.github.io/DiTWP/Bilder/311_VO_Github_07.png" alt="GitHub merge conflict">
-
-<div class="attribution">Beispiel aus der DiTWP-Seite.</div>
-
---
-
-## Konfliktmarker
-
-```text [1|2|3|4|5]
-<<<<<<< feature
-5.) Arbeitsfuge nicht bearbeiten
-=======
-5.) Arbeitsfuge gründlich bearbeiten
->>>>>>> main
-```
-
-<div class="callout fragment">
-Git markiert den Konflikt – <strong>der Mensch muss die fachlich richtige Lösung festlegen</strong>.
-</div>
-
---
-
-## Konflikt direkt im Editor
-
-<img class="image-wide" src="https://aiztok.github.io/DiTWP/Bilder/311_VO_Github_08.png" alt="GitHub conflict editor">
-
-<div class="attribution">Beispiel aus der DiTWP-Seite.</div>
-
----
-
-## 7 · Textdateien und binäre Dateien
-
-<table class="compact">
-<thead><tr><th>Textbasiert</th><th>Binär / proprietär</th></tr></thead>
-<tbody>
-<tr><td><code>.md</code>, <code>.py</code>, <code>.json</code>, <code>.csv</code>, <code>.ifc</code> (SPF)</td><td><code>.xlsx</code>, <code>.docx</code>, <code>.3dm</code>, viele native CAD/BIM-Dateien</td></tr>
-<tr class="fragment"><td>zeilenweiser Diff gut möglich</td><td>Datei kann versioniert werden</td></tr>
-<tr class="fragment"><td>Merge oft möglich</td><td>inhaltlicher Diff/Merge meist eingeschränkt</td></tr>
-</tbody>
-</table>
-
---
-
-## Git kann auch Binärdateien versionieren
-
-Was bleibt sichtbar?
-
-- Wer hat hochgeladen? <!-- .element: class="fragment" -->
-- Wann? <!-- .element: class="fragment" -->
-- Welche Commit-Beschreibung? <!-- .element: class="fragment" -->
-- Welche Dateiversion gehört zu welchem Projektstand? <!-- .element: class="fragment" -->
-
-<div class="warning fragment">
-Was meistens fehlt: ein verständlicher <strong>fachlicher Diff</strong> innerhalb der Datei.
-</div>
-
---
-
-## Große Binärdateien: Git LFS
-
-**Git LFS** ersetzt große Dateien im Repository durch kleine Pointer-Dateien und verwaltet den eigentlichen Inhalt separat.
-
-Typische Kandidaten:
-
-- große Punktwolken <!-- .element: class="fragment" -->
-- große native CAD-/BIM-Dateien <!-- .element: class="fragment" -->
-- große Ergebnisdateien <!-- .element: class="fragment" -->
-
-<div class="source-link">Weiterführend: GitHub Docs · About Git Large File Storage</div>
 
 ---
 
