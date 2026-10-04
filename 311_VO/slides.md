@@ -212,7 +212,7 @@ Beispiele aus der Tragwerksplanung:
 
 ---
 
-## Version ≠ Revision ≠ Status
+## Version ≠ Revision ≠ Phase/Bereich
 
 <table class="compact">
 <thead>
