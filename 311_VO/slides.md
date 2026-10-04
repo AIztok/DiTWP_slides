@@ -35,7 +35,7 @@ Einstieg über ein alltägliches Problem. Ziel: zeigen, dass Versionsverwaltung 
 
 ---
 
-## 1 · Dateibenennung
+## Dateibenennung
 ### Der einfachste Metadatenspeicher
 
 Ein guter Dateiname beantwortet bereits mehrere Fragen.
@@ -74,28 +74,9 @@ DiTWP_ZBW-W_LT_SP_V01.pdf
 Der Zweck ist nicht „schöne Dateinamen“, sondern <strong>eindeutige, sortierbare und maschinenlesbare Information</strong>.
 </div>
 
---
-
-## Version ≠ Revision ≠ Status
-
-<table class="compact">
-<thead>
-<tr><th>Begriff</th><th>Frage</th><th>Beispiel</th></tr>
-</thead>
-<tbody>
-<tr class="fragment"><td><strong>Version</strong></td><td>Welcher Bearbeitungsstand?</td><td>V01, V02, V03</td></tr>
-<tr class="fragment"><td><strong>Revision</strong></td><td>Welcher formal ausgegebene Änderungsstand?</td><td>Rev. A, Rev. B</td></tr>
-<tr class="fragment"><td><strong>Status</strong></td><td>Wofür darf der Stand verwendet werden?</td><td>WIP, Prüfung, Freigabe</td></tr>
-</tbody>
-</table>
-
-<div class="warning fragment">
-Die konkrete Codierung ist projektabhängig. Entscheidend ist, dass Bedeutung und Prozess eindeutig definiert sind.
-</div>
-
 ---
 
-## 2 · Versionsverwaltung im Bauprojekt
+## Versionsverwaltung im Bauprojekt
 
 <div class="two-col small">
   <div class="card">
@@ -125,15 +106,17 @@ Ein CDE ist im Sinn der ÖNORM ISO 19650 die vereinbarte Umgebung bzw. der Proze
 
 --
 
-Ein CDE ist nicht zwingend kein bestimmtes Softwarepaket, sondern ein **gemeinsamer Informationsprozess**, das folgendes abdeckt:
-- Dokumentmanagementsystem
-- Modellverwaltung
-- Kommunikations- und Kollaborations-Tools
-- Prozesse und Workflows
-- Zugriffs- und Berechtigungsmanagement
-- Protokollierung und Nachvollziehbarkeit (Audit-Trail)
+Ein CDE ist nicht zwingend ein bestimmtes Softwarepaket, sondern ein **gemeinsamer Informationsprozess**
+
+CDE besteht aus:
+- Dokumentmanagementsystem <!-- .element: class="fragment" -->
+- Modellverwaltung <!-- .element: class="fragment" -->
+- Kommunikations- und Kollaborations-Tools <!-- .element: class="fragment" -->
+- Zugriffs- und Berechtigungsmanagement <!-- .element: class="fragment" -->
+- Protokollierung und Nachvollziehbarkeit (Audit-Trail) <!-- .element: class="fragment" -->
 
 --
+
 Phasen / Bereiche jeder Information im CDE:
 <div class="four-col">
   <div class="state fragment"><strong>WIP</strong><br><small>Work in Progress</small></div>
@@ -144,31 +127,9 @@ Phasen / Bereiche jeder Information im CDE:
 
 <div class="source-link">Vereinfachte Darstellung nach ISO-19650-orientiertem CDE-Workflow.</div>
 
---
-
-## CDE: Information wechselt den Zustand
-
-<div class="flow">
-  <div class="box">WIP</div>
-  <div class="arrow">→</div>
-  <div class="box fragment">Prüfen</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Shared</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Freigeben</div>
-  <div class="arrow fragment">→</div>
-  <div class="box fragment">Published</div>
-</div>
-
-<br>
-
-<div class="callout fragment">
-Nicht nur die Datei ist wichtig – auch <strong>Zustand, Verantwortlichkeit und Freigabe</strong> gehören zur Information.
-</div>
-
 ---
 
-## 3 · Was ist Git?
+## Was ist Git?
 
 **Git = verteiltes Versionskontrollsystem**
 
@@ -199,7 +160,7 @@ Ein guter Commit beantwortet:
 
 ---
 
-## 4 · Branches
+## Branches
 ### Parallel arbeiten ohne den Hauptstand zu überschreiben
 
 <div class="branchline">
@@ -251,26 +212,27 @@ Beispiele aus der Tragwerksplanung:
 
 ---
 
-## CDE und Git: ähnliche Prinzipien
+## Version ≠ Revision ≠ Status
 
 <table class="compact">
-<thead><tr><th>Bauwesen</th><th>Softwareentwicklung</th></tr></thead>
+<thead>
+<tr><th>Begriff</th><th>Frage</th><th>Beispiel</th></tr>
+</thead>
 <tbody>
-<tr class="fragment"><td>Arbeitsstand</td><td>Branch / lokaler Arbeitsstand</td></tr>
-<tr class="fragment"><td>Version / Änderung</td><td>Commit</td></tr>
-<tr class="fragment"><td>Prüfung / Freigabe</td><td>Review / Pull Request</td></tr>
-<tr class="fragment"><td>Zusammenführen</td><td>Merge</td></tr>
-<tr class="fragment"><td>Projektplattform</td><td>Repository-Plattform</td></tr>
+<tr class="fragment"><td><strong>Version</strong></td><td>Welcher Bearbeitungsstand?</td><td>V01_2026-10-04 oder V01.1</td></tr>
+<tr class="fragment"><td><strong>Revision</strong></td><td>Welcher formal ausgegebene Änderungsstand?</td><td>V01, P01, F02</td></tr>
+<tr class="fragment"><td><strong>Status</strong></td><td>Wofür darf der Stand verwendet werden?</td><td>WIP, Prüfung, Freigabe</td></tr>
 </tbody>
 </table>
 
 <div class="warning fragment">
-Das ist eine <strong>Analogie</strong>, keine 1:1-Abbildung. Ein CDE ersetzt Git nicht – und Git ersetzt keinen projektspezifischen Freigabeprozess.
+Die konkrete Codierung ist projektabhängig. Entscheidend ist, dass Bedeutung und Prozess eindeutig definiert sind.
 </div>
+
 
 ---
 
-## 10 · Schnittstellen
+## Schnittstellen
 
 Eine Schnittstelle definiert, **wie Information zwischen Systemen übertragen wird**.
 
@@ -291,7 +253,4 @@ Eine Schnittstelle definiert, **wie Information zwischen Systemen übertragen wi
 - Dateibenennung ist die einfachste Form von **Metadatenmanagement**. <!-- .element: class="fragment" -->
 - CDE-Prozesse verwalten **Zustand, Freigabe und Verantwortung**. <!-- .element: class="fragment" -->
 - Git macht Änderungen **nachvollziehbar und parallel bearbeitbar**. <!-- .element: class="fragment" -->
-- GitHub ergänzt Git um **Review und Zusammenarbeit**. <!-- .element: class="fragment" -->
-- Binärdateien können versioniert werden, aber sind schwerer zu vergleichen. <!-- .element: class="fragment" -->
-- IFC-SPF ist textbasiert, trotzdem ist ein **semantischer Modelldiff** oft aussagekräftiger als ein Textdiff. <!-- .element: class="fragment" -->
 - Schnittstellen können datei-, repository-, objekt- oder API-basiert sein. <!-- .element: class="fragment" -->
