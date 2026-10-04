@@ -221,7 +221,7 @@ Beispiele aus der Tragwerksplanung:
 <tbody>
 <tr class="fragment"><td><strong>Version</strong></td><td>Welcher Bearbeitungsstand?</td><td>V01_2026-10-04 oder V01.1</td></tr>
 <tr class="fragment"><td><strong>Revision</strong></td><td>Welcher formal ausgegebene Änderungsstand?</td><td>V01, P01, F02</td></tr>
-<tr class="fragment"><td><strong>Status</strong></td><td>Wofür darf der Stand verwendet werden?</td><td>WIP, Prüfung, Freigabe</td></tr>
+<tr class="fragment"><td><strong>Phase/Bereich</strong></td><td>Wofür darf der Stand verwendet werden?</td><td>WIP, Prüfung, Freigabe</td></tr>
 </tbody>
 </table>
 
