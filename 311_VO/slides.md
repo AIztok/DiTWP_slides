@@ -121,8 +121,20 @@ Die konkrete Codierung ist projektabhängig. Entscheidend ist, dass Bedeutung un
 
 ## Common Data Environment · CDE
 
-Ein CDE ist kein bestimmtes Produkt, sondern ein **gemeinsamer Informationsprozess**.
+Ein CDE ist im Sinn der ÖNORM ISO 19650 die vereinbarte Umgebung bzw. der Prozess, über den Projektinformationen erzeugt, geprüft, geteilt, freigegeben und archiviert werden. 
 
+--
+
+Ein CDE ist nicht zwingend kein bestimmtes Softwarepaket, sondern ein **gemeinsamer Informationsprozess**, das folgendes abdeckt:
+- Dokumentmanagementsystem
+- Modellverwaltung
+- Kommunikations- und Kollaborations-Tools
+- Prozesse und Workflows
+- Zugriffs- und Berechtigungsmanagement
+- Protokollierung und Nachvollziehbarkeit (Audit-Trail)
+
+--
+Phasen / Bereiche jeder Information im CDE:
 <div class="four-col">
   <div class="state fragment"><strong>WIP</strong><br><small>Work in Progress</small></div>
   <div class="state fragment"><strong>Shared</strong><br><small>Koordination / Prüfung</small></div>
@@ -239,108 +251,6 @@ Beispiele aus der Tragwerksplanung:
 
 ---
 
-## Diff: Änderungen sichtbar machen
-
-<img class="image-wide" src="https://aiztok.github.io/DiTWP/Bilder/Pasted-image-20240930125622.png" alt="GitHub diff example">
-
-<div class="attribution">Beispiel aus der DiTWP-Seite: Änderungen einer Markdown-Datei in GitHub.</div>
-
----
-
-## 8 · IFC und Git
-
-Die verbreitete `.ifc`-Datei verwendet meist **IFC-SPF**.
-
-```text
-ISO-10303-21;
-HEADER;
-...
-DATA;
-#57=IFCPROPERTYSET(...);
-#58=IFCDEFINESBYPROPERTIES(...);
-...
-ENDSEC;
-END-ISO-10303-21;
-```
-
-<div class="callout fragment">
-IFC-SPF ist textbasiert – daher kann Git grundsätzlich einen Zeilen-Diff anzeigen.
-</div>
-
---
-
-## Beispiel: IFC-Diff in GitHub
-
-<img class="image-wide" src="https://aiztok.github.io/DiTWP/Bilder/311_VO_Github_ifc_7.png" alt="IFC GitHub diff">
-
-<div class="attribution">Beispiel: PSet wurde in einer IFC-Datei ergänzt.</div>
-
---
-
-## Aber: Text-Diff ≠ Modell-Diff
-
-Ein Text-Diff beantwortet:
-
-> Welche **Zeilen** sind anders?
-
-Ein Ingenieur möchte oft wissen:
-
-> Welche **Bauteile, Geometrien oder Eigenschaften** sind anders?
-
-<div class="warning fragment">
-Eine kleine fachliche Änderung kann beim erneuten IFC-Export sehr viele Textzeilen verändern.
-</div>
-
---
-
-## STEP-Instanznummern sind nicht stabil
-
-```text
-#123=IFCWALL(...);
-```
-
-`#123` identifiziert eine Instanz **innerhalb dieser Datei**.
-
-<div class="two-col">
-  <div class="card fragment">
-    <h3>STEP-ID</h3>
-    <p>lokal innerhalb der Serialisierung</p>
-    <p>kann sich beim neuen Export ändern</p>
-  </div>
-  <div class="card fragment">
-    <h3>GlobalId</h3>
-    <p>für IfcRoot-Objekte</p>
-    <p>soll über Austauschstände persistent bleiben</p>
-  </div>
-</div>
-
---
-
-## Semantischer IFC-Diff
-
-Statt Zeilen zu vergleichen, werden **Objekte** verglichen.
-
-<div class="flow">
-  <div class="box fragment">Added</div>
-  <div class="box fragment">Deleted</div>
-  <div class="box fragment">Changed</div>
-</div>
-
-<br>
-
-```python [1|3-7]
-from ifcdiff import IfcDiff
-
-diff = IfcDiff("old.ifc", "new.ifc", "diff.json")
-diff.diff()
-print(diff.change_register)
-diff.export()
-```
-
-<div class="source-link">IfcOpenShell · IfcDiff</div>
-
----
-
 ## CDE und Git: ähnliche Prinzipien
 
 <table class="compact">
@@ -356,22 +266,6 @@ diff.export()
 
 <div class="warning fragment">
 Das ist eine <strong>Analogie</strong>, keine 1:1-Abbildung. Ein CDE ersetzt Git nicht – und Git ersetzt keinen projektspezifischen Freigabeprozess.
-</div>
-
----
-
-## 9 · Speckle
-### Versionierung auf Modellebene
-
-Speckle arbeitet mit strukturierten Modellobjekten statt nur mit Dateien.
-
-- neue Sendung → neue Modellversion <!-- .element: class="fragment" -->
-- Versionen sind zeitlich nachvollziehbar <!-- .element: class="fragment" -->
-- Änderungen zwischen Versionen können verglichen werden <!-- .element: class="fragment" -->
-- Geometrie, Parameter und Struktur können Gegenstand des Vergleichs sein <!-- .element: class="fragment" -->
-
-<div class="callout fragment">
-Git ist eine gute Analogie – technisch ist Speckle aber keine einfache „Git-Version für 3D-Dateien“.
 </div>
 
 ---
