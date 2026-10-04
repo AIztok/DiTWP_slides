@@ -221,25 +221,6 @@ Beispiele aus der Tragwerksplanung:
 
 --
 
-## Vorsicht mit der BIM-Analogie
-
-<div class="two-col">
-  <div class="card">
-    <h3>Branch</h3>
-    <p>Alternative Entwicklung <strong>desselben Informationsbestands</strong>.</p>
-  </div>
-  <div class="card fragment">
-    <h3>Fachmodell</h3>
-    <p>Architektur-, Tragwerks- und TGA-Modell sind meist <strong>separate Informationsmodelle</strong>.</p>
-  </div>
-</div>
-
-<div class="warning fragment">
-Fachmodelle werden häufig <strong>referenziert, föderiert und koordiniert</strong> – nicht wie zwei Git-Branches zeilenweise zusammengeführt.
-</div>
-
---
-
 ## Typischer GitHub-Workflow
 
 <div class="flow">
