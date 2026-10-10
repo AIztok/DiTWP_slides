@@ -1,17 +1,12 @@
-<!--
-411_VO – Informationen werden Realität
-Reveal.js Markdown deck
-Images are referenced from the existing DiTWP website so the deck can reuse the course material.
--->
 
 # Digitale Tragwerksplanung
 
 ## Informationen werden Realität
 
-<div class="hero-image">
+--
+
   <img src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Skizze.png" alt="Skizze Informationsfluss Planung und Fertigung"
-       style="width:85%; height:auto;"
-</div>
+       style="width:100%; height:auto;"
 
 ---
 
