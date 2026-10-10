@@ -347,8 +347,6 @@ Numerisch gesteuerte Werkzeugmaschinen zeigen früh:
 
 > Geometrie kann in **formalisierten Bewegungsanweisungen** beschrieben werden.
 
-Das Prinzip prägt CNC-Fertigung bis heute.
-
 </div>
 </div>
 
@@ -398,8 +396,13 @@ Das Prinzip prägt CNC-Fertigung bis heute.
 
 ## Stahlbau: NC-DSTV als Fertigungsinformation
 
-<div class="two-col">
+<div class="two-col image-text">
 <div>
+<img src="https://aiztok.github.io/DiTWP/Bilder/425_dstv-nc_Bild_1.png" alt="NC-DSTV Bild">
+<div class="source">Bildquelle: Klietsch</div>
+</div>
+<div>
+
 
 NC-DSTV beschreibt Bearbeitungen an Stahlprofilen, z. B.:
 
@@ -407,21 +410,6 @@ NC-DSTV beschreibt Bearbeitungen an Stahlprofilen, z. B.:
 - Bohrungen
 - Schnitte
 - Markierungen
-
-</div>
-<div class="card">
-
-### Informationskette
-
-Tekla / CAD
-
-↓
-
-NC-DSTV
-
-↓
-
-Säge- / Bohr- / Brennanlage
 
 </div>
 </div>
@@ -453,9 +441,9 @@ Robotische Prozesse benötigen zusätzlich:
 
 ---
 
-# 5 · Design for Manufacturing
+# Design for Manufacturing
 
----
+--
 
 ## DFM: Fertigung bereits im Entwurf mitdenken
 
@@ -511,7 +499,7 @@ Robotische Prozesse benötigen zusätzlich:
 
 Kleine planerische Maßnahmen können die spätere Ausführung massiv vereinfachen.
 
-- Wie wird ein 200+ kg Gerät positioniert?
+- Wie wird ein 200+ kg Spannpresse positioniert?
 - Wo kann angeschlagen werden?
 - Welche Zugänglichkeit bleibt erhalten?
 - Wie erfolgt spätere Inspektion / Austausch?
@@ -553,11 +541,11 @@ Beispiele:
 
 ---
 
-# 6 · Fehler vermeiden: Poka Yoke
+# Fehler vermeiden: Poka Yoke
 
----
+--
 
-## Poka Yoke · mistake-proofing
+## Poka Yoke
 
 > Prozesse, Produkte und Schnittstellen so gestalten, dass Fehler **vermieden** oder **sofort erkannt** werden.
 
@@ -567,7 +555,7 @@ Beispiele:
 <div class="card"><strong>Fehler früh stoppen</strong><br>Validierung vor Export / Fertigung</div>
 </div>
 
----
+--
 
 ## Poka Yoke · physische Beispiele
 
@@ -594,7 +582,6 @@ Beispiele:
 ### Fehleranfällig
 
 - Material als Freitext
-- Einheit implizit
 - beliebige Zahleneingabe
 - Export überschreibt Datei
 - IFC-Klasse frei tippen
@@ -606,7 +593,6 @@ Beispiele:
 ### Robuster
 
 - Dropdown mit gültigen Werten
-- Einheit explizit
 - Wertebereich / Plausibilitätscheck
 - Export + Status + Pfad
 - Auswahl gültiger IFC-Klassen
@@ -617,67 +603,7 @@ Beispiele:
 
 ---
 
-## Versionierung ist Fehlervermeidung
-
-<div class="two-col">
-<div>
-
-### Problem
-
-`modell_final_neu_v3_final.ifc`
-
-Welche Datei ist aktuell?
-
-Was wurde geändert?
-
-Wer hat wann entschieden?
-
-</div>
-<div class="card accent-green">
-
-### Git-Prinzip
-
-**Working state → Diff → Commit → History**
-
-- IFC: GlobalId-basierter Vergleich
-- Grasshopper: InstanceGuid-basierter Vergleich
-- Branches: Varianten parallel entwickeln
-
-</div>
-</div>
-
----
-
-## Git-Prinzip an IFC und Grasshopper
-
-<div class="git-diagram">
-  <div class="commit">C1<br><small>Ausgang</small></div>
-  <div class="line"></div>
-  <div class="commit">C2<br><small>Änderung</small></div>
-  <div class="line"></div>
-  <div class="commit">C3<br><small>Freigabe</small></div>
-</div>
-
-<div class="two-col">
-<div class="card">
-<strong>IFC Version</strong><br>
-+ hinzugefügt<br>
-Δ geändert<br>
-− gelöscht
-</div>
-<div class="card">
-<strong>GH Version</strong><br>
-Komponenten<br>
-Wires<br>
-Parameter / Code
-</div>
-</div>
-
-<div class="callout">Versionierung macht Änderung selbst zu einer expliziten Information.</div>
-
----
-
-# 7 · Kompliziert ≠ komplex
+# Kompliziert ≠ komplex
 
 ---
 
@@ -686,7 +612,7 @@ Parameter / Code
 <div class="two-col image-text">
 <div>
 <img src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Uhrwerk_Bild.png" alt="Uhrwerk">
-<div class="source">Bild: DiTWP / Quelle siehe 411_VO</div>
+<div class="source">Bildquelle:  fotocommunity.de</div>
 </div>
 <div>
 
@@ -709,7 +635,7 @@ Viele Teile und Beziehungen – aber grundsätzlich:
 <div class="two-col image-text">
 <div>
 <img src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Mayo_Bild.png" alt="Mayonnaise">
-<div class="source">Bild: DiTWP / Quelle siehe 411_VO</div>
+<div class="source">Bildquelle: images.vrt.be</div>
 </div>
 <div>
 
@@ -754,7 +680,6 @@ Balkenmodell
 - Rissmodell
 - Bodenfedern
 - Bauzustände
-- Temperaturfelder
 
 </div>
 </div>
@@ -763,12 +688,11 @@ Balkenmodell
 
 ---
 
-## Ockhams Rasiermesser – sinnvoll interpretiert
+## Ockhams Rasiermesser
 
 <div class="two-col image-text">
 <div>
 <img src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Ockham.png" alt="Ockhams Rasiermesser Cartoon">
-<div class="source">Bild: DiTWP / Quelle siehe 411_VO</div>
 </div>
 <div>
 
@@ -801,95 +725,16 @@ Sondern: **„Welche Modellkomplexität ist für meine Fragestellung gerechtfert
 
 ---
 
-## Komplexe Systeme und „Normal Accidents“
-
-Besonders kritisch sind Systeme mit:
-
-<div class="two-col">
-<div class="card">
-<h3>komplexen Wechselwirkungen</h3>
-<p>Auswirkungen lokaler Änderungen sind schwer vorhersehbar.</p>
-</div>
-<div class="card">
-<h3>enger Kopplung</h3>
-<p>Fehler können sich schnell durch das System fortpflanzen.</p>
-</div>
-</div>
-
-<div class="callout">Digitale Durchgängigkeit reduziert manche Fehler – kann andere aber schneller skalieren.</div>
-
----
-
-## Live-Demo · Systemkomplexität
-
-<iframe class="live-frame" src="https://complexity-e1.streamlit.app/?embed=true" title="Streamlit Demo Komplexität"></iframe>
-
-<div class="small">Falls die Einbettung nicht lädt: https://complexity-e1.streamlit.app/</div>
-
----
-
-# 8 · LLMs als neue Schnittstelle
-
----
-
-## Natürliche Sprache → Code → Modell
-
-<div class="pipeline big-pipeline">
-  <div>Natürliche Sprache</div><span>→</span>
-  <div>LLM</div><span>→</span>
-  <div>Python / C# / SQL</div><span>→</span>
-  <div>CAD / BIM</div><span>→</span>
-  <div>CAM</div>
-</div>
-
-<div class="callout">Ein LLM ist kein Interpreter. Es kann Code erzeugen – ausgeführt wird dieser anschließend durch Interpreter / Compiler / Anwendung.</div>
-
----
-
-## Beispiel: Text-to-CAD
-
-<div class="two-col image-text">
-<div>
-<img src="https://aiztok.github.io/DiTWP/Bilder/421_Zoo_text-to-cad_example_1_gif.gif" alt="Text to CAD Beispiel">
-<div class="source">Animation: DiTWP</div>
-</div>
-<div>
-
-### Neue Schnittstelle
-
-„Erstelle einen Träger mit …“
-
-↓
-
-strukturierter Code / Geometrie
-
-↓
-
-CAD / BIM / Berechnung
-
-### Aber
-
-Auch hier gelten dieselben Prinzipien:
-
-**Validieren · Versionieren · Prüfen · Fertigung verstehen**
-
-</div>
-</div>
-
----
-
 # Kernaussagen
 
 <div class="four-grid takeaway-grid">
 <div class="card"><strong>1</strong><br>Information wird erst wertvoll, wenn sie korrekt weiterverarbeitet werden kann.</div>
-<div class="card"><strong>2</strong><br>CAD, CAE und CAM bilden unterschiedliche Rollen in derselben Prozesskette.</div>
 <div class="card"><strong>3</strong><br>DFM und Poka Yoke beginnen bereits in der Planung.</div>
-<div class="card"><strong>4</strong><br>Versionierung macht Änderung nachvollziehbar und reduziert Fehlanwendung alter Stände.</div>
-<div class="card"><strong>5</strong><br>Mehr Modellkomplexität ist nicht automatisch mehr Genauigkeit.</div>
+<div class="card"><strong>5</strong><br>Mehr (Modell)komplexität ist nicht automatisch mehr Genauigkeit.</div>
 <div class="card"><strong>6</strong><br>Automatisierung braucht robuste Schnittstellen, Einheiten, Semantik und Prüfungen.</div>
 </div>
 
----
+--
 
 # Vom digitalen Modell zur Realität
 
@@ -902,22 +747,3 @@ Auch hier gelten dieselben Prinzipien:
 </div>
 
 <div class="quote large-quote">Digitalisierung bedeutet nicht nur Daten erzeugen.<br><strong>Sie bedeutet Informationsflüsse bewusst gestalten.</strong></div>
-
----
-
-## Quellen / Vertiefung
-
-<div class="small left-align">
-
-- DiTWP 411_VO: https://aiztok.github.io/DiTWP/400_Informationen_werden_Realit%C3%A4t/410/411_VO
-- DIN 8580 – Fertigungsverfahren
-- G-Code / ISO 6983, DIN 66025
-- BVBS / ABS – Bewehrungsfertigung
-- NC-DSTV – Stahlbaufertigung
-- Charles Perrow: *Normal Accidents: Living with High-Risk Technologies*
-- William of Ockham / Modellparsimony
-- DiTWP-Kapitel zu Git, IFC, FEM, G-Code, BVBS und NC-DSTV
-
-</div>
-
-<div class="source">Bilder in dieser Präsentation: vorhandene Assets der DiTWP-Webseite; Originalquellen siehe 411_VO.</div>
