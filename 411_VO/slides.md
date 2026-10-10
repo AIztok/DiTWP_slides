@@ -3,10 +3,11 @@
 
 ## Informationen werden Realität
 
---
+---
 
-  <img src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Skizze.png" alt="Skizze Informationsfluss Planung und Fertigung"
-       style="width:100%; height:auto;"
+  <img 
+    src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Skizze.png" alt="Skizze Informationsfluss Planung und Fertigung"
+    style="width:100%; height:auto;"
   >
 
 ---
