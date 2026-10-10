@@ -10,7 +10,7 @@ Images are referenced from the existing DiTWP website so the deck can reuse the 
 
 <div class="hero-image">
   <img src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Skizze.png" alt="Skizze Informationsfluss Planung und Fertigung"
-       style="width:85%; height:auto;>
+       style="width:85%; height:auto;"
 </div>
 
 ---
