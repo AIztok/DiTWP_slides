@@ -8,7 +8,7 @@
 <img
   src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Skizze.png"
   alt="Skizze Informationsfluss Planung und Fertigung"
-  style="max-height:80%;width:auto;">
+  style="max-width:40%;height:auto;">
 
 ---
 
