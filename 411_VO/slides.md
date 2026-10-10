@@ -365,13 +365,13 @@ Das Prinzip prägt CNC-Fertigung bis heute.
 <tr><td>CNC / 3D-Druck</td><td>Bewegungen + Prozessparameter</td><td><strong>G-Code</strong></td></tr>
 <tr><td>Bewehrung</td><td>Stabdurchmesser + Biegeform + Längen</td><td><strong>BVBS / ABS</strong></td></tr>
 <tr><td>Stahlbau</td><td>Profil + Bohrungen + Schnitte</td><td><strong>NC-DSTV</strong></td></tr>
-<tr><td>Roboter</td><td>Trajektorie + Aktionen + Logik</td><td><strong>KRL / RAPID / …</strong></td></tr>
+<tr><td>Roboter</td><td>Trajektorie + Aktionen + Logik</td><td><strong>ROS / KRL (Kuka) / RAPID (ABB) / …</strong></td></tr>
 </tbody>
 </table>
 
 <div class="callout">Der Plan ist für Menschen. Das Maschinenformat ist für die Fertigung.</div>
 
----
+--
 
 ## Bewehrung: von der Biegeliste zur CNC-Maschine
 
@@ -393,7 +393,11 @@ Das Prinzip prägt CNC-Fertigung bis heute.
 
 **Fehler werden ebenso effizient automatisiert.**
 
----
+--
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/llc576PmdUg?si=_VxAcB63eNycvJYy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+--
 
 ## Stahlbau: NC-DSTV als Fertigungsinformation
 
