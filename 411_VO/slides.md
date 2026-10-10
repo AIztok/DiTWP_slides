@@ -239,8 +239,6 @@ Dort entstehen Möglichkeiten für:
 
 Rhino / AutoCAD / Revit / Tekla / Allplan …
 
-<div class="big-number">GEOMETRIE</div>
-
 </div>
 </div>
 
@@ -304,14 +302,13 @@ CAM überführt Planungsinformation in eine **fertigungsbezogene Beschreibung**:
 ## Vom Modell zur Maschine
 
 <div class="pipeline big-pipeline">
-  <div>CAD / BIM</div><span>→</span>
+  <div>CAD / BIM</div><span>↔</span>
   <div>CAE</div><span>↔</span>
   <div>CAM</div><span>→</span>
-  <div>Postprocessor</div><span>→</span>
   <div>NC / CNC / Roboter</div>
 </div>
 
----
+--
 
 # Maschinen bekommen Anweisungen
 
@@ -322,7 +319,7 @@ CAM überführt Planungsinformation in eine **fertigungsbezogene Beschreibung**:
 <div class="two-col image-text">
 <div>
 <img src="https://aiztok.github.io/DiTWP/Bilder/411_VO_Lochband.png" alt="Lochband">
-<div class="source">Bild: DiTWP / Quelle siehe 411_VO</div>
+<div class="source">Bildquelle: gcodetutor</div>
 </div>
 <div>
 
@@ -340,7 +337,7 @@ Frühe numerische Steuerungen nutzten physische Datenträger.
 <div class="two-col image-text">
 <div>
 <img src="https://aiztok.github.io/DiTWP/Bilder/411_VO_NC_machine.png" alt="Frühe NC Fräsmaschine">
-<div class="source">Bild: DiTWP / Originalquelle siehe 411_VO</div>
+<div class="source">Bildquelle: make magazine</div>
 </div>
 <div>
 
