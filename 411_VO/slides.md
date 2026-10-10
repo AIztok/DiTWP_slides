@@ -746,10 +746,10 @@ Sondern: **„Welche Modellkomplexität ist für meine Fragestellung gerechtfert
 # Kernaussagen
 
 <div class="four-grid takeaway-grid">
-<div class="card"><strong>1</strong><br>Information wird erst wertvoll, wenn sie korrekt weiterverarbeitet werden kann.</div>
-<div class="card"><strong>3</strong><br>DFM und Poka Yoke beginnen bereits in der Planung.</div>
-<div class="card"><strong>5</strong><br>Mehr (Modell)komplexität ist nicht automatisch mehr Genauigkeit.</div>
-<div class="card"><strong>6</strong><br>Automatisierung braucht robuste Schnittstellen, Einheiten, Semantik und Prüfungen.</div>
+<div class="card">Information wird erst wertvoll, wenn sie korrekt weiterverarbeitet werden kann.</div>
+<div class="card"><DFM und Poka Yoke beginnen bereits in der Planung.</div>
+<div class="card"><Mehr (Modell)komplexität ist nicht automatisch mehr Genauigkeit.</div>
+<div class="card">Automatisierung braucht robuste Schnittstellen, Einheiten, Semantik und Prüfungen.</div>
 </div>
 
 --
