@@ -368,6 +368,20 @@ Numerisch gesteuerte Werkzeugmaschinen zeigen früh:
 
 --
 
+
+## G-Code
+
+<div class="two-col image-text">
+<div>
+<img src="https://aiztok.github.io/DiTWP/Bilder/423_3D-Druck_slicer.gif" alt="3DDruck">
+</div>
+<div>
+
+G-Code findet in vielen Bereichen der modernen Fertigung und Produktion Anwendung
+
+
+--
+
 ## Bewehrung: von der Biegeliste zur CNC-Maschine
 
 <div class="pipeline big-pipeline">
@@ -387,6 +401,10 @@ Numerisch gesteuerte Werkzeugmaschinen zeigen früh:
 ### Risiko
 
 **Fehler werden ebenso effizient automatisiert.**
+
+--
+
+<img src="https://aiztok.github.io/DiTWP/Bilder/424_BVBS_gif.gif" alt="BVBS_Viewer">
 
 --
 
