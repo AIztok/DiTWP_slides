@@ -4,23 +4,17 @@ Reveal.js Markdown deck
 Images are referenced from the existing DiTWP website so the deck can reuse the course material.
 -->
 
-# Informationen werden Realität
+# Digitale Tragwerksplanung
 
-## Von der Planung zur Fertigung
-
-**Digitale Tragwerksplanung · 411_VO**
+## Informationen werden Realität
 
 <div class="hero-image">
   <img src="https://aiztok.github.io/DiTWP/Bilder/421_VO_Skizze.png" alt="Skizze Informationsfluss Planung und Fertigung">
 </div>
 
-<div class="source">Bild: DiTWP</div>
-
 ---
 
-## Lernziele
-
-Nach dieser Einheit sollen Sie …
+## Inhalt
 
 <div class="two-col">
 <div class="card">
@@ -46,9 +40,9 @@ Nach dieser Einheit sollen Sie …
 
 ---
 
-# 1 · Vom digitalen Modell zum realen Bauwerk
+# Vom digitalen Modell zum realen Bauwerk
 
----
+--
 
 ## Status quo: digitale Inseln
 
@@ -123,7 +117,7 @@ Information wird mehrfach <strong>übersetzt, neu erfasst, geprüft und weiterge
 - BVBS / ABS
 - NC-DSTV
 - G-Code
-- Robotersprache
+- Robotersprache (ROS, KRL, RAPID...)
 
 **Stärke:** eindeutige, strukturierte, wiederholbare Verarbeitung
 
@@ -134,9 +128,9 @@ Information wird mehrfach <strong>übersetzt, neu erfasst, geprüft und weiterge
 
 ---
 
-# 2 · Bauen ist Fertigung
+# Bauen ist Fertigung
 
----
+--
 
 ## Einzelfertigung – mit vielen Wiederholungen
 
@@ -159,7 +153,7 @@ Dort entstehen Möglichkeiten für:
 
 </div>
 
----
+--
 
 ## Fertigungsverfahren nach DIN 8580
 
@@ -172,9 +166,7 @@ Dort entstehen Möglichkeiten für:
   <div class="card"><strong>6 · Stoffeigenschaften ändern</strong><br>z. B. Wärmebehandlung</div>
 </div>
 
-<div class="small muted">Hinweis: „additiv / subtraktiv“ ist eine andere, gröbere Betrachtungsweise. Betonieren in Schalung ist nach DIN 8580 Urformen.</div>
-
----
+--
 
 ## Warum muss die Planung Fertigung kennen?
 
@@ -197,31 +189,35 @@ Dort entstehen Möglichkeiten für:
 
 ---
 
-# 3 · CAD · CAE · CAM
+# CAD · CAE · CAM
 
----
+- CAD - Computer-Aided Design
+- CAE - Computer-Aided Engineering
+- CAM - Computer-Aided Manufacturing
 
-## Drei Begriffe – drei Kernfragen
+--
+
+## CAD · CAE · CAM
 
 <div class="three-col">
 <div class="card accent-blue">
-<h2>CAD</h2>
-<p class="big">Was soll geometrisch entstehen?</p>
+<h4>CAD</h4>
+<p class="big">Was soll entstehen?</p>
 <p>Geometrie · Modell · Zeichnung · Detail</p>
 </div>
 <div class="card accent-green">
-<h2>CAE</h2>
+<h4>CAE</h4>
 <p class="big">Wie verhält es sich?</p>
 <p>Analyse · Simulation · Bemessung · Optimierung</p>
 </div>
 <div class="card accent-orange">
-<h2>CAM</h2>
+<h4>CAM</h4>
 <p class="big">Wie wird es hergestellt?</p>
 <p>Werkzeugwege · Zuschnitt · Biegen · Maschinenbefehle</p>
 </div>
 </div>
 
----
+--
 
 ## CAD · Computer-Aided Design
 
@@ -231,7 +227,7 @@ Dort entstehen Möglichkeiten für:
 **Typische Aufgaben**
 
 - 2D-Zeichnungen
-- 3D-Geometrie
+- 3D-Planung
 - konstruktive Details
 - technische Dokumentation
 - parametrische Geometrie
@@ -239,30 +235,28 @@ Dort entstehen Möglichkeiten für:
 </div>
 <div class="card">
 
-### Tragwerksplanung
+### Bauwerksplanung
 
-Rhino / AutoCAD / Revit / Tekla / …
+Rhino / AutoCAD / Revit / Tekla / Allplan …
 
 <div class="big-number">GEOMETRIE</div>
 
 </div>
 </div>
 
----
+--
 
 ## CAE · Computer-Aided Engineering
 
-<div class="two-col">
+<div class="two-row">
 <div class="card">
 
 ### Tragwerksplanung
 
-- FE-Modell
 - Schnittgrößen
-- Spannungen
 - Verformungen
-- Stabilität
-- Dynamik
+- Spannungen
+- Stabilität & Dynamik
 - Bemessung
 
 </div>
@@ -277,7 +271,7 @@ Mehr Freiheitsgrade und Parameter bedeuten nicht automatisch eine bessere Progno
 </div>
 </div>
 
----
+--
 
 ## CAM · Computer-Aided Manufacturing
 
@@ -289,7 +283,6 @@ CAM überführt Planungsinformation in eine **fertigungsbezogene Beschreibung**:
 - Werkzeugbahnen
 - Maschinenachsen
 - Bearbeitungsreihenfolge
-- Geschwindigkeiten / Vorschübe
 - Prozessparameter
 
 </div>
@@ -300,7 +293,6 @@ CAM überführt Planungsinformation in eine **fertigungsbezogene Beschreibung**:
 - CNC-Bewehrungsbiegung
 - Stahlprofilbearbeitung
 - Laserschneiden
-- Holzabbund
 - 3D-Betondruck
 - robotische Fertigung
 
@@ -319,21 +311,11 @@ CAM überführt Planungsinformation in eine **fertigungsbezogene Beschreibung**:
   <div>NC / CNC / Roboter</div>
 </div>
 
-<div class="fragment">
-
-### Entscheidend
-
-Nicht nur **welche Information** vorhanden ist, sondern auch:
-
-**Format · Einheit · Koordinatensystem · Version · Semantik · Toleranz**
-
-</div>
-
 ---
 
-# 4 · Maschinen bekommen Anweisungen
+# Maschinen bekommen Anweisungen
 
----
+--
 
 ## Vom Lochband zur digitalen Schnittstelle
 
@@ -350,12 +332,8 @@ Frühe numerische Steuerungen nutzten physische Datenträger.
   <span>Lochkarte / Lochband</span> → <span>NC</span> → <span>CNC</span> → <span>vernetzte Fertigung</span>
 </div>
 
-Heute wandern Daten überwiegend digital zwischen Planung, CAM und Maschine.
 
-</div>
-</div>
-
----
+--
 
 ## NC-Fräsen: der Schritt zur numerischen Steuerung
 
