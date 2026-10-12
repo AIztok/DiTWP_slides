@@ -17,13 +17,18 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@6.0.1/dist/plugin/highlight/monokai.css">
 
   <style>
+    /* =========================================================
+       GENERAL
+       ========================================================= */
+
     .reveal .slides {
       padding-top: 10px;
       padding-bottom: 10px;
     }
 
     .reveal figcaption,
-    .reveal .attribution {
+    .reveal .attribution,
+    .reveal .source {
       font-size: 0.52em;
       opacity: 0.68;
     }
@@ -32,6 +37,15 @@
     .reveal .tiny { font-size: 0.54em; }
     .reveal .muted { opacity: 0.68; }
     .reveal .accent { color: #1769aa; }
+
+    .reveal .big {
+      font-size: 1.10em;
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       COLUMN / GRID LAYOUTS
+       ========================================================= */
 
     .reveal .two-col {
       display: grid;
@@ -55,6 +69,32 @@
       align-items: stretch;
     }
 
+    .reveal .four-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.55em;
+      align-items: stretch;
+    }
+
+    .reveal .six-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.55em;
+      align-items: stretch;
+      font-size: 0.78em;
+    }
+
+    .reveal .two-row {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 0.7em;
+      text-align: left;
+    }
+
+    /* =========================================================
+       CARDS / CALLOUTS
+       ========================================================= */
+
     .reveal .card {
       border: 1px solid #d7d7d7;
       border-radius: 12px;
@@ -63,8 +103,32 @@
     }
 
     .reveal .card h3,
-    .reveal .card h4 {
+    .reveal .card h4,
+    .reveal .card h5,
+    .reveal .card h6 {
       margin-top: 0;
+    }
+
+    .reveal .accent-blue {
+      border-top: 5px solid #1769aa;
+    }
+
+    .reveal .accent-green {
+      border-top: 5px solid #2e7d32;
+    }
+
+    .reveal .accent-orange {
+      border-top: 5px solid #c67c00;
+    }
+
+    .reveal .good {
+      border-left: 6px solid #2e7d32;
+      background: #f3faf4;
+    }
+
+    .reveal .bad {
+      border-left: 6px solid #b23b3b;
+      background: #fff5f5;
     }
 
     .reveal .callout {
@@ -72,6 +136,7 @@
       padding: 0.45em 0.8em;
       background: #f4f8fc;
       text-align: left;
+      margin-top: 0.55em;
     }
 
     .reveal .warning {
@@ -80,6 +145,27 @@
       background: #fff8eb;
       text-align: left;
     }
+
+    .reveal .quote {
+      font-size: 0.92em;
+      font-style: italic;
+      padding: 0.55em 0.85em;
+      border-left: 5px solid #1769aa;
+      text-align: left;
+      background: #f5f8fb;
+      margin-top: 0.55em;
+    }
+
+    .reveal .large-quote {
+      font-size: 1.10em;
+      text-align: center;
+      border-left: none;
+      background: transparent;
+    }
+
+    /* =========================================================
+       FLOW DIAGRAMS
+       ========================================================= */
 
     .reveal .flow {
       display: flex;
@@ -102,6 +188,86 @@
       font-size: 1.25em;
       opacity: 0.7;
     }
+
+    .reveal .flow-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45em;
+      flex-wrap: nowrap;
+      margin: 0.6em auto;
+    }
+
+    .reveal .flow-row.compact {
+      gap: 0.30em;
+    }
+
+    .reveal .flow-box {
+      border: 1px solid #bdbdbd;
+      border-radius: 10px;
+      padding: 0.45em 0.65em;
+      background: #fafafa;
+      text-align: center;
+      flex: 1 1 0;
+    }
+
+    .reveal .flow-box span {
+      font-size: 0.70em;
+      opacity: 0.7;
+    }
+
+    .reveal .arrow {
+      opacity: 0.65;
+      flex: 0 0 auto;
+    }
+
+    .reveal .pipeline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.30em;
+      flex-wrap: wrap;
+      margin: 0.55em auto;
+    }
+
+    .reveal .pipeline > div {
+      border: 1px solid #aaa;
+      border-radius: 9px;
+      padding: 0.35em 0.55em;
+      background: #fafafa;
+      text-align: center;
+    }
+
+    .reveal .pipeline > span {
+      opacity: 0.65;
+    }
+
+    .reveal .big-pipeline {
+      font-size: 0.90em;
+    }
+
+    .reveal .feedback {
+      margin-top: 0.35em;
+      font-size: 0.78em;
+      opacity: 0.82;
+    }
+
+    .reveal .final-flow {
+      margin-top: 1em;
+    }
+
+    .reveal .timeline-mini {
+      margin-top: 0.8em;
+      padding: 0.45em 0.65em;
+      border-radius: 9px;
+      background: #f6f6f6;
+      font-size: 0.78em;
+      text-align: center;
+    }
+
+    /* =========================================================
+       BRANCH / GIT DIAGRAMS
+       ========================================================= */
 
     .reveal .branchline {
       display: grid;
@@ -152,6 +318,10 @@
       background: white;
     }
 
+    /* =========================================================
+       TABLES
+       ========================================================= */
+
     .reveal table.compact {
       font-size: 0.64em;
     }
@@ -161,8 +331,30 @@
       padding: 0.23em 0.42em;
     }
 
-    .reveal pre { width: 96%; }
-    .reveal pre code { max-height: 480px; }
+    .reveal .compact-table {
+      font-size: 0.68em;
+    }
+
+    .reveal .compact-table th,
+    .reveal .compact-table td {
+      padding: 0.24em 0.42em;
+    }
+
+    /* =========================================================
+       CODE
+       ========================================================= */
+
+    .reveal pre {
+      width: 96%;
+    }
+
+    .reveal pre code {
+      max-height: 480px;
+    }
+
+    /* =========================================================
+       IMAGES
+       ========================================================= */
 
     .reveal .image-wide {
       max-width: 92%;
@@ -182,21 +374,187 @@
       object-fit: contain;
     }
 
+    .reveal .image-text {
+      align-items: center;
+    }
+
+    .reveal .image-text img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: contain;
+    }
+
+    .reveal .images-equal {
+      align-items: start;
+    }
+
+    .reveal .images-equal img {
+      width: 100%;
+      height: 340px;
+      object-fit: contain;
+    }
+
     .reveal .source-link {
       margin-top: 0.35em;
       font-size: 0.40em;
       opacity: 0.62;
     }
 
-    /* PDF / print helpers
-       Use in slides.md:
-       <div class="screen-only">...</div>  -> shown in presentation
-       <div class="print-only">...</div>   -> shown only in PDF/print
-    */
+    /* =========================================================
+       MODEL COMPLEXITY SCALE
+       ========================================================= */
+
+    .reveal .model-scale {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.55em;
+      margin: 0.8em auto;
+    }
+
+    .reveal .model-scale .zone {
+      border-radius: 10px;
+      padding: 0.8em 0.65em;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .reveal .model-scale .under {
+      background: #fff3e8;
+    }
+
+    .reveal .model-scale .goodzone {
+      background: #eef8ef;
+    }
+
+    .reveal .model-scale .over {
+      background: #fff0f0;
+    }
+
+    .reveal .takeaway-grid {
+      font-size: 0.78em;
+    }
+
+    /* =========================================================
+       SCREEN / PDF HELPERS
+       ========================================================= */
+
     .print-only {
       display: none;
     }
 
+    .screen-only {
+      display: block;
+    }
+
+    /*
+      Reveal adds class="print-pdf" to <html> when ?print-pdf is used.
+      These rules are active before Reveal calculates PDF page geometry.
+    */
+    html.print-pdf .reveal {
+      font-size: 30px;
+    }
+
+    html.print-pdf .reveal .slides {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    html.print-pdf .reveal h1,
+    html.print-pdf .reveal h2,
+    html.print-pdf .reveal h3,
+    html.print-pdf .reveal h4,
+    html.print-pdf .reveal h5,
+    html.print-pdf .reveal h6 {
+      margin-top: 0.20em;
+      margin-bottom: 0.28em;
+      line-height: 1.08;
+    }
+
+    html.print-pdf .reveal p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    html.print-pdf .reveal ul,
+    html.print-pdf .reveal ol {
+      margin-top: 0.20em;
+      margin-bottom: 0.20em;
+    }
+
+    html.print-pdf .reveal li {
+      margin-bottom: 0.08em;
+      line-height: 1.18;
+    }
+
+    html.print-pdf .reveal .card {
+      padding: 0.38em 0.52em;
+    }
+
+    html.print-pdf .reveal .callout,
+    html.print-pdf .reveal .warning,
+    html.print-pdf .reveal .quote {
+      padding-top: 0.30em;
+      padding-bottom: 0.30em;
+      margin-top: 0.30em;
+    }
+
+    html.print-pdf .reveal .two-col,
+    html.print-pdf .reveal .three-col,
+    html.print-pdf .reveal .four-col,
+    html.print-pdf .reveal .four-grid,
+    html.print-pdf .reveal .six-grid,
+    html.print-pdf .reveal .model-scale {
+      gap: 0.45em;
+    }
+
+    html.print-pdf .reveal .flow-row,
+    html.print-pdf .reveal .pipeline {
+      margin-top: 0.30em;
+      margin-bottom: 0.30em;
+    }
+
+    html.print-pdf .reveal .flow-box,
+    html.print-pdf .reveal .pipeline > div {
+      padding: 0.28em 0.42em;
+    }
+
+    html.print-pdf .reveal img {
+      max-height: 390px;
+      object-fit: contain;
+    }
+
+    html.print-pdf .reveal .image-wide,
+    html.print-pdf .reveal .image-medium,
+    html.print-pdf .reveal .image-small,
+    html.print-pdf .reveal .image-text img {
+      max-height: 390px;
+    }
+
+    html.print-pdf .reveal .images-equal img {
+      height: 300px;
+      max-height: 300px;
+    }
+
+    html.print-pdf .reveal pre {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    html.print-pdf .reveal pre code {
+      max-height: 360px;
+      font-size: 0.82em;
+      line-height: 1.16;
+    }
+
+    html.print-pdf .screen-only {
+      display: none !important;
+    }
+
+    html.print-pdf .print-only {
+      display: block !important;
+    }
+
+    /* Browser print media */
     @media print {
       body {
         -webkit-print-color-adjust: exact;
@@ -211,19 +569,29 @@
         display: block !important;
       }
 
-      /* Keep replacement screenshots/images within one PDF page. */
       .print-only img {
         max-width: 95%;
-        max-height: 72vh;
+        max-height: 68vh;
         object-fit: contain;
       }
     }
 
+    /* =========================================================
+       RESPONSIVE SCREEN VIEW
+       ========================================================= */
+
     @media (max-width: 900px) {
       .reveal .two-col,
       .reveal .three-col,
-      .reveal .four-col {
+      .reveal .four-col,
+      .reveal .four-grid,
+      .reveal .six-grid,
+      .reveal .model-scale {
         grid-template-columns: 1fr;
+      }
+
+      .reveal .flow-row {
+        flex-wrap: wrap;
       }
     }
   </style>
@@ -259,8 +627,14 @@
       transition: 'slide',
       center: true,
 
-      /* PDF export: open the presentation with ?print-pdf and print from Chrome/Chromium.
-         Fragments are combined on one PDF page instead of creating one page per reveal step. */
+      /*
+        PDF export:
+        Open with ?print-pdf and print from Chrome / Chromium.
+
+        - all fragments are shown together on one page
+        - each Reveal slide is limited to one PDF page
+        - CSS above reduces font size and spacing only in PDF mode
+      */
       pdfSeparateFragments: false,
       pdfMaxPagesPerSlide: 1,
 
@@ -275,4 +649,5 @@
     });
   </script>
 </body>
+
 </html>
